@@ -7,7 +7,7 @@
     ],
     "rules": {
        "indent": ["error", 2],
-       "quotes": ["error", "single"],
+       "quotes": "off",
        "semi": ["error", "always"],
        "react/no-unescaped-entities": "off"
     },
