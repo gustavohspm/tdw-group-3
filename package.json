@@ -21,7 +21,8 @@
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prettier": "prettier . --check . --write"
+    "prettier": "prettier . --check . --write",
+    "lint": "next lint"
   },
   "eslintConfig": {
     "extends": [
