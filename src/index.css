@@ -1,13 +1,46 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --text-bold: "Verdana", sans-serif;
+  --text-regular: "Verdana", sans-serif;
+  --friendlist-text-regular: "Friendlist Regular", sans-serif;
+  --blue-palette-color: #a7c7d9;
+  --green-palette-color: #aabe96;
+  --beige-palette-color: #e3d3b2;
+  --black-palette-color: #000000;
+  --white-palette-color: #ffffff;
+  --grey-palette-color: #eeeeee;
+  --alert-palette-color: #e8687f;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: var(--friendlist-text-regular);
+  src: url("./fonts/friendlist-regular.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+}
+
+.regular-font-text {
+  font-family: var(--text-regular);
+}
+
+.bold-font-text {
+  font-family: var(--text-bold);
+  font-weight: bold;
+}
+
+.logo-font-text {
+  font-family: var(--friendlist-text-regular);
+}
+
+.small-text-size {
+  font-size: 16px;
+}
+
+.medium-text-size {
+  font-size: 20px;
+}
+
+.large-text-size {
+  font-size: 24px;
 }

@@ -1,0 +1,20 @@
+{
+  "globalTexts": {
+    "next": "Próximo",
+    "previous": "Anterior"
+  },
+  "splashScreen": {
+    "firstImageTitle": "Español 1",
+    "secondImageTitle": "Español 2",
+    "thirdImageTitle": "Español 3",
+    "firstImageDescription": "Español Descrición 1",
+    "secondImageDescription": "Español Descrición 2",
+    "thirdImageDescription": "Español Descrición 3"
+  },
+  "menu": {},
+  "home": {},
+  "shoppingCart": {},
+  "profile": {},
+  "clothDetails": {},
+  "sustainableCategories": {}
+}
