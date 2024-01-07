@@ -1,0 +1,20 @@
+{
+  "globalTexts": {
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "splashScreen": {
+    "firstImageTitle": "English 1",
+    "secondImageTitle": "English 2",
+    "thirdImageTitle": "English 3",
+    "firstImageDescription": "English Description 1",
+    "secondImageDescription": "English Description 2",
+    "thirdImageDescription": "English Description 3"
+  },
+  "menu": {},
+  "home": {},
+  "shoppingCart": {},
+  "profile": {},
+  "clothDetails": {},
+  "sustainableCategories": {}
+}
