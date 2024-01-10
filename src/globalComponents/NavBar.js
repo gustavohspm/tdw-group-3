@@ -72,7 +72,7 @@ const NavBar = () => {
             <Link to="/profile">My Account</Link>
           </li>
           <li>
-            <Link to="/faqs">FAQ</Link>
+            <Link to="/FAQs">FAQs</Link>
           </li>
           <li className="navbar-item">
             <LanguageButton setLanguage={setLanguage} />
