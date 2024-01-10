@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import LanguageButton from "./LanguageButton";
-import en from "./languages/en.json";
-import es from "./languages/es.json";
-import pt from "./languages/pt.json";
-import { NavContainer } from "./styles";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import LanguageButton from './LanguageButton';
+import en from './languages/en.json';
+import es from './languages/es.json';
+import pt from './languages/pt.json';
+import { NavContainer } from './styles';
 
 const NavBar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -16,10 +16,10 @@ const NavBar = () => {
 
   useEffect(() => {
     handleResize();
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -30,7 +30,7 @@ const NavBar = () => {
           <button>☰ Menu</button>
           <ul>
             <li>
-              <Link  to="/">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/about">About Us</Link>
@@ -61,7 +61,9 @@ const NavBar = () => {
             <Link to="/">Brands</Link>
           </li>
           <li>
-            <Link className="logo-text" to="/">Leafeel</Link>
+            <Link className="logo-text" to="/cloth-details">
+              Leafeel
+            </Link>
           </li>
           <li>
             <Link to="/about">About</Link>
