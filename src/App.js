@@ -36,6 +36,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import en from './globalComponents/languages/en.json';
 import es from './globalComponents/languages/es.json';
 import pt from './globalComponents/languages/pt.json';
+import FAQs from './components/FAQs';
 
 export default function App() {
   //const [language, setLanguage] = useState(en);
@@ -49,6 +50,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/FAQs" element={<FAQs />} />
         <Route path="/cloth-details" element={<ClothDetails />} />
         <Route path="/product/:id" element={<ProductDetails />} />
       </Routes>
