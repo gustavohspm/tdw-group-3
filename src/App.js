@@ -26,17 +26,18 @@
 
 // export default App;
 
-import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.css";
-import LanguageButton from "./globalComponents/LanguageButton";
-import Home from "./components/Home";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import en from "./globalComponents/languages/en.json";
-import es from "./globalComponents/languages/es.json";
-import pt from "./globalComponents/languages/pt.json";
+import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import LanguageButton from './globalComponents/LanguageButton';
+import Home from './components/Home';
+import ClothDetails from './components/ClothDetails';
+import ProductDetails from './components/ProductDetails';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import en from './globalComponents/languages/en.json';
+import es from './globalComponents/languages/es.json';
+import pt from './globalComponents/languages/pt.json';
 
 export default function App() {
-
   //const [language, setLanguage] = useState(en);
 
   return (
@@ -48,8 +49,9 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/cloth-details" element={<ClothDetails />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
       </Routes>
     </Router>
   );
 }
-
