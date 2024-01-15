@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Accordion from 'react-bootstrap/Accordion';
 import NavBar from '../globalComponents/NavBar';
 import './FAQs.css';
+import Footer from '../globalComponents/Footer';
 
 function FAQs() {
   const circleStyle1 = {
@@ -237,6 +238,7 @@ function FAQs() {
       </Accordion>
       <p style={{ marginTop: '20px' }}>These categories cover a range of certifications addressing environmental impact, ethical manufacturing, animal welfare, and workplace conditions in the textile industry.</p>
     </div>
+    <Footer />
     </div>
   );
 }

@@ -1,0 +1,23 @@
+.custom-footer {
+    background-color: #AABE96;
+    padding: 20px 0;
+  }
+    
+  .custom-footer .col-md-3:not(:last-child)::after {
+    content: " | ";
+    color: #dfebd3;
+  }
+  
+  .custom-footer .col-md-3 {
+    display: flex;
+    justify-content: center;
+  }
+  
+.custom-footer a {
+    transition: font-weight 0.3s;
+  }
+  
+  .custom-footer a:hover {
+    font-weight: bold;
+  }
+  

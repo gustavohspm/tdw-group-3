@@ -1,37 +1,29 @@
-import { useEffect, useState } from 'react';
-import Container from 'react-bootstrap/Container';
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import './Footer.css';
 
-export default function AppFooter() {
-    const [showTopBtn, setShowTopBtn] = useState(false);
-
-    useEffect(() => {
-        window.addEventListener('scroll', () => {
-            if(window.scrollY > 400) {
-                setShowTopBtn(true);
-            } else {
-                setShowTopBtn(false);
-            }
-            })
-    }, [])
-
-    function goTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        })
-    }
-
+function Footer() {
     return (
+      <footer className="custom-footer">
         <Container fluid>
-            <div className='copyright'>&copy; 2022 Corporate. All Right Reserved.</div>
-            <div className='links'>
-                <ul>
-                    <li><a href="https://www.ua.pt/pt/curso/508"></a></li>
-                </ul>
-            </div>
-            {
-                showTopBtn && (<div className='go-top' onClick={goTop}></div>)
-            }
+          <Row>
+            <Col md={3} className="d-flex justify-content-center">
+              <Link to="/about" className="text-light mx-2">About</Link>
+            </Col>
+            <Col md={3} className="d-flex justify-content-center">
+              <Link to="/FAQs" className="text-light mx-2">FAQs</Link>
+            </Col>
+            <Col md={3} className="d-flex justify-content-center">
+              <Link to="/terms" className="text-light mx-2">Terms & Conditions</Link>
+            </Col>
+            <Col md={3} className="d-flex justify-content-center">
+              <Link to="/accessibility" className="text-light mx-2">Accessibility</Link>
+            </Col>
+          </Row>
         </Container>
-    )
+      </footer>
+    );
 }
+  
+export default Footer;
