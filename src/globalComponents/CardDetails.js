@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../App.css';
 
-const CardDetails = ({ id, title, image, price, brand }) => {
+const CardDetails = ({ title, image, price, brand }) => {
   const [favorited, setFavorited] = useState(false);
 
   const handleToggleFavorite = () => {
@@ -20,8 +21,6 @@ const CardDetails = ({ id, title, image, price, brand }) => {
         alt={title}
         className="card-img-top rounded-0 custom-image"
       />
-      {/* <Link to={`/product/${id}`} className="position-relative d-block">
-      </Link> */}
       <div className="card-body">
         <p className="card-text">€ {price} </p>
         <h6 className="card-title">
@@ -33,7 +32,7 @@ const CardDetails = ({ id, title, image, price, brand }) => {
           className={`favorite-star ${favorited ? 'favorited' : ''}`}
           onClick={handleToggleFavorite}
         >
-          &#9733;
+          <i className="bi bi-star" />
         </div>
       </div>
     </div>
