@@ -49,7 +49,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cloth-details" element={<ClothDetails />} />
+        <Route path="/woman" element={<ClothDetails />} />
         <Route path="/product/:id" element={<ProductDetails />} />
       </Routes>
     </Router>
