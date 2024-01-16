@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 import MenuHamburguerButton from "./MenuHamburguerButton";
 import NavBarItems from "./NavBarItems";
 import LanguageButton from "./LanguageButton";
-import en from "../globalComponents/languages/en.json";
-import es from "../globalComponents/languages/es.json";
-import pt from "../globalComponents/languages/pt.json";
+
 import blackLogo from "../assets/leafeel_black.png";
-import { FaSearch, FaStar, FaShoppingCart, FaUser } from "react-icons/fa";
-import { Navbar, Nav } from "react-bootstrap";
+import { FaSearch, FaUser } from "react-icons/fa";
+import { Nav } from "react-bootstrap";
 import { useLanguage } from "./LanguageContext";
+import ShoppingCart from "../assets/shoppingcart.svg";
+import Star from "../assets/star.svg";
+import Profile from "../assets/user.svg";
 
 const Container = styled.div`
   display: flex;
@@ -109,22 +110,27 @@ const SearchInput = styled.input`
   }
 `;
 
-const StarIcon = styled(FaStar)`
-  width: 1.5rem;
-  height: 1.5rem;
+const IconSvg = styled.img`
+  width: 1.8rem;
+  height: 1.8rem;
   cursor: pointer;
 `;
 
-const ShoppingCartIcon = styled(FaShoppingCart)`
-  width: 1.5rem;
-  height: 1.5rem;
+const IconShopSvg = styled.img`
+  width: 1.6em;
+  height: 1.6em;
   cursor: pointer;
 `;
 
-const ProfileIcon = styled(FaUser)`
-  width: 1.5rem;
-  height: 1.5rem;
+const IconProfileSvg = styled.img`
+  width: 2.2rem;
+  height: 2.2rem;
   cursor: pointer;
+`;
+
+const StyledLink = styled(Link)`
+  color: var(--black-palette-color);
+  text-decoration: none;
 `;
 
 const NavBar = () => {
@@ -156,6 +162,25 @@ const NavBar = () => {
         { name: language.menu.woman.item6, path: "/coats" },
       ],
     },
+
+    // {
+    //   name: language.menu.certifications.header,
+    //   disabled: false,
+    //   subcategories: [
+    //     { name: language.menu.certifications.item1, path: "/organic" },
+    //     { name: language.menu.certifications.item2, path: "/fairtrade" },
+    //     { name: language.menu.certifications.item3, path: "/resources" },
+    //     { name: language.menu.certifications.item4, path: "/animal-welfare" },
+    //   ],
+    // },
+    {
+      name: language.menu.man.header,
+      disabled: true,
+    },
+    {
+      name: language.menu.kids.header,
+      disabled: true,
+    },
     {
       name: language.menu.brands.header,
       disabled: false,
@@ -168,24 +193,6 @@ const NavBar = () => {
         { name: "EEEEEE", path: "/eeeeee" },
         { name: "FFFFFF", path: "/ffffff" },
       ],
-    },
-    {
-      name: language.menu.certifications.header,
-      disabled: false,
-      subcategories: [
-        { name: language.menu.certifications.item1, path: "/organic" },
-        { name: language.menu.certifications.item2, path: "/fairtrade" },
-        { name: language.menu.certifications.item3, path: "/resources" },
-        { name: language.menu.certifications.item4, path: "/animal-welfare" },
-      ],
-    },
-    {
-      name: language.menu.man.header,
-      disabled: true,
-    },
-    {
-      name: language.menu.kids.header,
-      disabled: true,
     },
   ];
 
@@ -265,7 +272,7 @@ const NavBar = () => {
         />
         <NavLinkItem
           style={{
-            paddingLeft: window.innerWidth < 810 ? "2rem" : "0",
+            paddingLeft: window.innerWidth < 810 ? "1.4rem" : "0",
           }}
         >
           <LanguageButton />
@@ -283,19 +290,19 @@ const NavBar = () => {
             />
           </SearchContainer>
         )}
-        <Nav.Link href="#" className="px-3">
-          <StarIcon />
-        </Nav.Link>
-        <Nav.Link
-          href="#"
+        <StyledLink to="#" className="px-3">
+          <IconSvg src={ Star } />
+        </StyledLink>
+        <StyledLink
+          to="#"
           className={window.innerWidth > 810 ? "px-3" : "ps-3"}
         >
-          <ShoppingCartIcon />
-        </Nav.Link>
+          <IconShopSvg src={ ShoppingCart } />
+        </StyledLink>
         {window.innerWidth > 810 && (
-          <Nav.Link href="#" className="ps-3 pe-4">
-            <ProfileIcon />
-          </Nav.Link>
+          <StyledLink to="#" className="ps-3 pe-4">
+            <IconProfileSvg src={ Profile } />
+          </StyledLink>
         )}
       </div>
     </Container>

@@ -3,18 +3,8 @@ import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-import { FaSearch, FaStar, FaShoppingCart, FaUser } from "react-icons/fa";
-import LanguageButton from "./LanguageButton";
-import en from "../globalComponents/languages/en.json";
-import es from "../globalComponents/languages/es.json";
-import pt from "../globalComponents/languages/pt.json";
-import { useLanguage } from './LanguageContext';
-
-const ProfileIcon = styled(FaUser)`
-  width: 1.8rem;
-  height: 1.8rem;
-  cursor: pointer;
-`;
+import { useLanguage } from "./LanguageContext";
+import Profile from "../assets/user.svg";
 
 const Category = styled.div`
   position: relative;
@@ -97,6 +87,7 @@ const NoHasSubCategory = styled(Link)`
   text-decoration: none;
   padding-left: 1rem;
   transform: translateX(20px);
+  font-family: "Century Gothic", sans-serif;
 
   ${({ currentDisabled }) =>
     currentDisabled &&
@@ -112,28 +103,6 @@ const StyledSimpleLink = styled(Link)`
       &:hover {
         color: var(--grey-palette-color-text) !important;
       }
-  }
-`;
-
-const NoHasSubCategoryMobile = styled(Link)`
-  @media (max-width: 810px) {
-    display: flex;
-    align-items: unset !important;
-    justify-content: space-between;
-    padding-right: 1rem;
-    transition:
-      transform 0.3s ease-in-out,
-      position 0.3s ease-in-out,
-      top 0.3s ease-in-out;
-
-    &:hover {
-      transform: translateX(20px);
-    }
-  }
-
-  @media (max-width: 810px) {
-    justify-content: flex-start;
-    padding-right: 0;
   }
 `;
 
@@ -202,6 +171,12 @@ const ChevronLeft = styled.span`
   transition: opacity 0.3s ease-in-out;
   opacity: ${({ active }) => (active ? 1 : 0)};
   padding: 0.5rem;
+`;
+
+const IconSvg = styled.img`
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
 `;
 
 const NavBarItems = ({
@@ -383,211 +358,26 @@ const NavBarItems = ({
       )}
       {isMobile && (
         <div>
-          <Category className="ms-5 me-5 my-2 d-flex align-items-center">
-            <ProfileIcon />
-            <span className="ms-2 text-uppercase">{language.globalTexts.myAccount}</span>
-          </Category>
+          <NoHasSubCategory to="#" className="d-flex align-items-center">
+            <IconSvg src={Profile} />
+            <span className="ms-2 text-uppercase">
+              {language.globalTexts.myAccount}
+            </span>
+          </NoHasSubCategory>
         </div>
       )}
     </>
   );
 };
-
-//     return (
-//       <>
-//         {categories.map((category, index) => (
-//           <div key={`category-${index}`} style={{ width: "100%" }}>
-//             {isMobile ? (
-//               <MobileCategory
-//                 key={`mobile-category-${index}`}
-//                 onClick={() =>
-//                   isMobile &&
-//                   setActiveCategory((prev) => (prev === index ? null : index))
-//                 }
-//                 style={{
-//                   display:
-//                     isMobile &&
-//                     (activeCategory === null || activeCategory === index)
-//                       ? "block"
-//                       : "none",
-//                   width: "100%",
-//                 }}
-//                 active={activeCategory}
-//                 index={index}
-//               >
-//                 {category.subcategories && category.subcategories.length > 0 ? (
-//                   <>
-//                     <ChevronLeft active={activeCategory === index}>
-//                       &#8249;
-//                     </ChevronLeft>
-//                     {category.name}
-//                     <ChevronRight active={activeCategory === index}>
-//                       &#8250;
-//                     </ChevronRight>
-//                     <hr />
-//                   </>
-//                 ) : (
-//                   <NoHasSubCategory to={category.path}>
-//                     {category.image && (
-//                       <img
-//                         src={category.image}
-//                         alt={`Imagem da ${category.name}`}
-//                       />
-//                     )}
-//                     {category.name && (
-//                       <span>{category.name}</span>
-//                     )}
-//                   </NoHasSubCategory>
-//                 )}
-//               </MobileCategory>
-//             ) : (
-//               <Category
-//                 key={`category-${index}`}
-//                 onMouseEnter={() => !isMobile && setActiveCategory(index)}
-//                 style={{
-//                   display: isMobile ? (activeCategory === index ? "none" : "block") : "block",
-//                   width: "100%",
-//                 }}
-//               >
-//                 {category.subcategories && category.subcategories.length > 0 ? (
-//                   <>
-//                     {category.name}
-//                     <Dropdown>
-//                       {category.subcategories.map((sub, subIndex) => (
-//                         <SubCategory key={subIndex} to={sub.path}>
-//                           {sub.name}
-//                         </SubCategory>
-//                       ))}
-//                     </Dropdown>
-//                   </>
-//                 ) : (
-//                     <NoHasSubCategory to={category.path}>
-//                     {category.image && (
-//                       <img
-//                         src={category.image}
-//                         alt={`Imagem da ${category.name}`}
-//                       />
-//                     )}
-//                     {category.name && (
-//                       <span>{category.name}</span>
-//                     )}
-//                   </NoHasSubCategory>
-//                 )}
-//               </Category>
-//             )}
-//           </div>
-//         ))}
-//         {isMobile && activeCategory !== null && (
-//           <MobileDropdown isOpenMenu={isMenuOpen}>
-//             {categories[activeCategory].subcategories &&
-//               categories[activeCategory].subcategories.map((sub, subIndex) => (
-//                 <SubCategory key={subIndex} to={sub.path}>
-//                   {sub.name}
-//                 </SubCategory>
-//               ))}
-//           </MobileDropdown>
-//         )}
-//       </>
-//     );
-//   };
-
-// const NavBarItems = ({
-//     categories,
-//     activeCategory,
-//     setActiveCategory,
-//     isMenuOpen,
-//   }) => {
-//     const [isMobile, setIsMobile] = useState(window.innerWidth < 810);
-
-//     useEffect(() => {
-//       const handleResize = () => {
-//         setIsMobile(window.innerWidth < 810);
-//       };
-
-//       window.addEventListener("resize", handleResize);
-
-//       return () => {
-//         window.removeEventListener("resize", handleResize);
-//       };
-//     }, []);
-
-//     return (
-//       <>
-//         {categories.map((category, index) => (
-//           <div key={`category-${index}`} style={{ width: '100%' }}>
-
-//             {isMobile && (
-//               <MobileCategory
-//                 key={`mobile-category-${index}`}
-//                 onClick={() =>
-//                   isMobile &&
-//                   setActiveCategory((prev) => (prev === index ? null : index))
-//                 }
-//                 style={{
-//                   display: isMobile && (activeCategory === null || activeCategory === index)
-//                     ? "block"
-//                     : "none",
-//                   width: '100%',
-//                 }}
-//                 active={activeCategory}
-//                 index={index}
-//               >
-//                 <ChevronLeft active={activeCategory === index}>&#8249;</ChevronLeft>
-//                 {category.name}
-//                 <ChevronRight active={activeCategory === index}>
-//                   &#8250;
-//                 </ChevronRight>
-//                 <hr />
-
-//                 {isMobile && activeCategory === index && (
-//                   <MobileDropdown isOpenMenu={isMenuOpen}>
-//                     {category.subcategories.map((sub, subIndex) => (
-//                       <SubCategory key={subIndex} to={sub.path}>
-//                         {sub.name}
-//                       </SubCategory>
-//                     ))}
-//                   </MobileDropdown>
-//                 )}
-//               </MobileCategory>
-//             )}
-//             {!isMobile && (
-//               <Category
-//                 key={`category-${index}`}
-//                 onMouseEnter={() => !isMobile && setActiveCategory(index)}
-//                 style={{
-//                   display: isMobile ? (activeCategory === index ? "none" : "block") : "block",
-//                   width: '100%',
-//                 }}
-//               >
-//                 {category.name}
-//                 {!isMobile && activeCategory === index && (
-//                   <Dropdown>
-//                     {category.subcategories.map((sub, subIndex) => (
-//                       <SubCategory key={subIndex} to={sub.path}>
-//                         {sub.name}
-//                       </SubCategory>
-//                     ))}
-//                   </Dropdown>
-//                 )}
-//               </Category>
-//             )}
-//           </div>
-//         ))}
-//       </>
-//     );
-//   };
-
 NavBarItems.propTypes = {
   categories: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      path: PropTypes.string, // Adicione esta linha para 'path'
-      // Outras propriedades da categoria, se houver
+      path: PropTypes.string,
       subcategories: PropTypes.arrayOf(
         PropTypes.shape({
           name: PropTypes.string.isRequired,
-          path: PropTypes.string, // Adicione esta linha para 'path'
-          // Outras propriedades da subcategoria, se houver
+          path: PropTypes.string,
         })
       ),
     })
