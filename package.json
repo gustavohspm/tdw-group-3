@@ -16,8 +16,10 @@
     "prop-types": "^15.8.1",
     "react-bootstrap": "^2.9.2",
     "react-flagkit": "^2.0.4",
+    "react-icons": "^5.0.1",
     "react-redux": "^9.0.4",
     "react-scripts": "5.0.1",
+    "react-transition-group": "^4.4.5",
     "redux": "^5.0.1",
     "styled-components": "^6.1.6",
     "web-vitals": "^2.1.4"
@@ -27,7 +29,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 8106",
     "build-storybook": "storybook build",
     "prettier": "prettier . --check . --write",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"

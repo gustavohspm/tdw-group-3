@@ -53,13 +53,15 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      <h1>Bem-vindo à página inicial!</h1>
-      {showSplashScreen && <SplashScreen onClose={handleCloseModal} />}
-      <div className="mb-4">
-        <Carousel images={images} autoPlay={true} />
-      </div>
-      <div className="mb-4">
-        <Carousel images={images} autoPlay={true} />
+      <div className="mt-5 pt-5">
+        <h1>Bem-vindo à página inicial!</h1>
+        {showSplashScreen && <SplashScreen onClose={handleCloseModal} />}
+        <div className="mb-4">
+          <Carousel images={images} autoPlay={true} />
+        </div>
+        <div className="mb-4">
+          <Carousel images={images} autoPlay={true} />
+        </div>
       </div>
     </div>
   );
