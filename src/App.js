@@ -37,6 +37,7 @@ import en from './globalComponents/languages/en.json';
 import es from './globalComponents/languages/es.json';
 import pt from './globalComponents/languages/pt.json';
 import FAQs from './components/FAQs';
+import Profile from './components/Profile';
 
 export default function App() {
   //const [language, setLanguage] = useState(en);
@@ -53,6 +54,7 @@ export default function App() {
         <Route path="/FAQs" element={<FAQs />} />
         <Route path="/cloth-details" element={<ClothDetails />} />
         <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/Profile" element={<Profile />} />
       </Routes>
     </Router>
   );

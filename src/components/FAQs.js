@@ -238,7 +238,6 @@ function FAQs() {
       </Accordion>
       <p style={{ marginTop: '20px' }}>These categories cover a range of certifications addressing environmental impact, ethical manufacturing, animal welfare, and workplace conditions in the textile industry.</p>
     </div>
-    <Footer />
     </div>
   );
 }
