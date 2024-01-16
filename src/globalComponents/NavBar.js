@@ -6,8 +6,7 @@ import NavBarItems from "./NavBarItems";
 import LanguageButton from "./LanguageButton";
 
 import blackLogo from "../assets/leafeel_black.png";
-import { FaSearch, FaUser } from "react-icons/fa";
-import { Nav } from "react-bootstrap";
+import { FaSearch } from "react-icons/fa";
 import { useLanguage } from "./LanguageContext";
 import ShoppingCart from "../assets/shoppingcart.svg";
 import Star from "../assets/star.svg";
