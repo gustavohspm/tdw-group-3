@@ -1,0 +1,51 @@
+{
+  "globalTexts": {
+    "language": "Español",
+    "flag": "../assets/es.svg",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "search": "Búsqueda",
+    "myAccount": "Mi Cuenta"
+  },
+  "splashScreen": {
+    "firstImageTitle": "Español 1",
+    "secondImageTitle": "Español 2",
+    "thirdImageTitle": "Español 3",
+    "firstImageDescription": "Español Descrición 1",
+    "secondImageDescription": "Español Descrición 2",
+    "thirdImageDescription": "Español Descrición 3"
+  },
+  "menu": {
+    "certifications": {
+      "header": "Certificaciones",
+      "item1": "Certificación de Material Orgánico",
+      "item2": "Comercio Justo y Fabricación Ética",
+      "item3": "Impacto Ambiental y Responsabilidad con Recursos",
+      "item4": "Certificación de Bienestar Animal"
+    },
+    "woman": {
+      "header": "Mujer",
+      "item0": "Ver toda la sesión",
+      "item1": "Pantalones",
+      "item2": "Vestidos",
+      "item3": "Zapatos",
+      "item4": "Bolsos",
+      "item5": "Blusas",
+      "item6": "Abrigos"
+    },
+    "man": {
+      "header": "Hombre"
+    },
+    "kids": {
+      "header": "Niños"
+    },
+    "brands": {
+      "header": "Marcas"
+    }
+  },
+  "home": {},
+  "shoppingCart": {},
+  "profile": {},
+  "clothDetails": {},
+  "sustainableCategories": {}
+}

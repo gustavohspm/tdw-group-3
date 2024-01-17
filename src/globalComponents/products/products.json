@@ -1,0 +1,163 @@
+[
+  {
+    "id": 1,
+    "image": "/images/01.jpg",
+    "title": "Vestido Floral",
+    "price": 59.99,
+    "sizes": ["S", "M", "L"],
+    "colors": ["Floral"],
+    "brand": "FashionStyle",
+    "category": "feminino",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [
+        "ftts",
+        "wrap",
+        {
+          "colorSection": "#EDD57F"
+        }
+      ],
+      "resources": [
+        "blue",
+        "sfa",
+        {
+          "colorSection": "#61BEAD"
+        }
+      ],
+      "animalwelfare": [
+        "rws",
+        "rds",
+        {
+          "colorSection": "#628FC5"
+        }
+      ],
+      "workconditions": [
+        "fwf",
+        {
+          "colorSection": "#B39AC7"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "image": "/images/02.jpg",
+    "title": "Sapato de Salto Alto",
+    "price": 89.99,
+    "sizes": ["36", "37", "38", "39"],
+    "colors": ["Preto", "Vermelho"],
+    "brand": "Zara",
+    "category": "feminino",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [
+        "ftts",
+        "wrap",
+        {
+          "colorSection": "#EDD57F"
+        }
+      ],
+      "resources": [
+        "blue",
+        "sfa",
+        {
+          "colorSection": "#61BEAD"
+        }
+      ],
+      "animalwelfare": [],
+      "workconditions": []
+    }
+  },
+  {
+    "id": 3,
+    "image": "/images/03.jpg",
+    "title": "Bolsa",
+    "price": 19.99,
+    "sizes": ["Único"],
+    "colors": ["Marrom", "Caramelo"],
+    "brand": "Nalu",
+    "category": "feminino"
+  },
+  {
+    "id": 4,
+    "image": "/images/04.jpg",
+    "title": "Blusa de Algodão",
+    "price": 29.99,
+    "sizes": ["S", "M", "L"],
+    "colors": ["Rosa", "Branco"],
+    "brand": "CasualWear",
+    "category": "feminino"
+  },
+  {
+    "id": 5,
+    "image": "/images/05.jpeg",
+    "title": "Sandália Rasteira",
+    "price": 39.99,
+    "sizes": ["35", "36", "37", "38"],
+    "colors": ["Preto", "Branco"],
+    "brand": "SummerFootwear",
+    "category": "feminino"
+  },
+  {
+    "id": 6,
+    "image": "/images/06.jpg",
+    "title": "Calça de Alfaiataria",
+    "price": 29.99,
+    "sizes": ["36", "38", "40"],
+    "colors": ["Cinza"],
+    "brand": "DenimStyle",
+    "category": "feminino"
+  },
+  {
+    "id": 7,
+    "image": "/images/07.jpg",
+    "title": "Camisola de Tricô",
+    "price": 19.99,
+    "sizes": ["S", "M", "L"],
+    "colors": ["Branca"],
+    "brand": "JewelCraft",
+    "category": "feminino"
+  },
+  {
+    "id": 8,
+    "image": "/images/08.jpg",
+    "title": "Saia Midi",
+    "price": 54.99,
+    "sizes": ["S", "M", "L"],
+    "colors": ["Cinza", "Preto"],
+    "brand": "ElegantFashion",
+    "category": "feminino"
+  },
+  {
+    "id": 9,
+    "image": "/images/09.jpg",
+    "title": "Casaco",
+    "price": 79.99,
+    "sizes": ["Único"],
+    "colors": ["Branco"],
+    "brand": "UrbanExplorer",
+    "category": "feminino"
+  },
+  {
+    "id": 10,
+    "image": "/images/10.jpg",
+    "title": "Vestido de Festa Longo",
+    "price": 129.99,
+    "sizes": ["S", "M", "L"],
+    "colors": ["Flora"],
+    "brand": "GlamourDress",
+    "category": "feminino"
+  }
+]

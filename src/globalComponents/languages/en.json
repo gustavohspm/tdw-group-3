@@ -1,0 +1,51 @@
+{
+  "globalTexts": {
+    "language": "English",
+    "flag": "../assets/en.svg",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "myAccount": "My Account"
+  },
+  "splashScreen": {
+    "firstImageTitle": "English 1",
+    "secondImageTitle": "English 2",
+    "thirdImageTitle": "English 3",
+    "firstImageDescription": "English Description 1",
+    "secondImageDescription": "English Description 2",
+    "thirdImageDescription": "English Description 3"
+  },
+  "menu": {
+    "certifications": {
+      "header": "Certifications",
+      "item1": "Organic Material Certification",
+      "item2": "Fair Trade and Ethical Manufacturing",
+      "item3": "Environmental Impact and Resource Responsibility",
+      "item4": "Animal Welfare Certification"
+    },
+    "woman": {
+      "header": "Woman",
+      "item0": "View the entire session",
+      "item1": "Trousers",
+      "item2": "Dresses",
+      "item3": "Shoes",
+      "item4": "Bags",
+      "item5": "Blouses",
+      "item6": "Coats"
+    },
+    "man": {
+      "header": "Man"
+    },
+    "kids": {
+      "header": "Kids"
+    },
+    "brands": {
+      "header": "Brands"
+    }
+  },
+  "home": {},
+  "shoppingCart": {},
+  "profile": {},
+  "clothDetails": {},
+  "sustainableCategories": {}
+}
