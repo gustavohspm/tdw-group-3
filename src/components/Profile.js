@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './Profile.css';
 import NavBar from '../globalComponents/NavBar';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe, faFlag, faUser } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../globalComponents/Footer';
 
 const Profile = () => {
@@ -28,26 +26,12 @@ const Profile = () => {
     return currencyToCountryCode[currencyCode] || '';
   };
 
-  const getFlagIcon = (countryCode) => {
-    switch (countryCode) {
-      case 'GB':
-        return <FontAwesomeIcon icon={faFlag} />;
-      case 'PT':
-        return <FontAwesomeIcon icon={faFlag} />;
-      case 'ES':
-        return <FontAwesomeIcon icon={faFlag} />;
-      default:
-        return null;
-    }
-  };
-
   return (
     <div>
       <NavBar />
       <div className="user-profile">
         <h1>
         <span className="user-icon">
-             <FontAwesomeIcon icon={faUser} />
          </span>
             Welcome, <br/> Renata Vilela!</h1>
         <ul>
@@ -70,7 +54,7 @@ const Profile = () => {
         <div className="select-container">
             <div>
                 <label htmlFor="language">
-                    <FontAwesomeIcon icon={faGlobe} /> Select Language
+                    Select Language
                 </label>
                 <select id="language" value={language} onChange={handleLanguageChange}>
                     <option value="en-GB">English (UK)</option>
@@ -81,7 +65,7 @@ const Profile = () => {
 
                 <div>
                 <label htmlFor="currency">
-                    <FontAwesomeIcon icon={faFlag} /> Select Currency
+                    Select Currency
                 </label>
                 <select id="currency" value={currency} onChange={handleCurrencyChange}>
                     <option value="GBP">GBP - British Pound</option>

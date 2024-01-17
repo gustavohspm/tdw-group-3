@@ -299,7 +299,7 @@ const NavBar = () => {
           <IconShopSvg src={ ShoppingCart } />
         </StyledLink>
         {window.innerWidth > 810 && (
-          <StyledLink to="#" className="ps-3 pe-4">
+          <StyledLink to="/profile" className="ps-3 pe-4">
             <IconProfileSvg src={ Profile } />
           </StyledLink>
         )}

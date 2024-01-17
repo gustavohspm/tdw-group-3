@@ -15,7 +15,7 @@ export default function App() {
         <Route path="/woman" element={<ClothDetails />} />
         <Route path="/FAQs" element={<FAQs />} />
         <Route path="/product/:id" element={<ProductDetails />} />
-        <Route path="/Profile" element={<Profile />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );
