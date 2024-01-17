@@ -169,6 +169,7 @@ const NavBar = () => {
     //     { name: language.menu.certifications.item1, path: "/organic" },
     //     { name: language.menu.certifications.item2, path: "/fairtrade" },
     //     { name: language.menu.certifications.item3, path: "/resources" },
+    //     { name: language.menu.certifications.item3, path: "/work-conditions" },
     //     { name: language.menu.certifications.item4, path: "/animal-welfare" },
     //   ],
     // },
