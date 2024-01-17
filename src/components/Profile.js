@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './Profile.css';
 import NavBar from '../globalComponents/NavBar';
 import Footer from '../globalComponents/Footer';
+import renata from '../renata.jpg';
 
 const Profile = () => {
   const [language, setLanguage] = useState('en-GB');
@@ -31,12 +32,11 @@ const Profile = () => {
       <NavBar />
       <div className="user-profile">
         <h1>
-        <span className="user-icon">
-         </span>
+        <img className="renata" src={renata} alt="renata" />
             Welcome, <br/> Renata Vilela!</h1>
         <ul>
           <li>
-            <Link to="/my-history">My History</Link>
+            <Link to="/my-purchases">My purchases</Link>
           </li>
           <li>
             <Link to="/orders-and-returns">Orders & Returns</Link>
@@ -49,20 +49,9 @@ const Profile = () => {
           </li>
         </ul>
 
-        <h2>Language and Region</h2>
 
         <div className="select-container">
-            <div>
-                <label htmlFor="language">
-                    Select Language
-                </label>
-                <select id="language" value={language} onChange={handleLanguageChange}>
-                    <option value="en-GB">English (UK)</option>
-                    <option value="pt-PT">Português (Portugal)</option>
-                    <option value="es-ES">Español (España)</option>
-                </select>
-                </div>
-
+        <h2>Region</h2>
                 <div>
                 <label htmlFor="currency">
                     Select Currency
@@ -100,26 +89,6 @@ const Profile = () => {
             <p>
             <a href="/communication-preferences">Communication Preferences</a>
             </p>
-        </div>
-        <div className="support-section">
-        <h2>Support</h2>
-        <ul>
-            <li>
-            <a href="/about-leafeel">About Leafeel</a>
-            </li>
-            <li>
-            <a href="/terms-and-conditions">Terms & Conditions</a>
-            </li>
-            <li>
-            <a href="/privacy-policy">Privacy Policy</a>
-            </li>
-            <li>
-            <a href="/faqs">FAQs</a>
-            </li>
-            <li>
-            <a href="/brands">Brands</a>
-            </li>
-        </ul>
         </div>
         <Footer />
     </div>

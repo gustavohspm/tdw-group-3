@@ -3,6 +3,7 @@ body {
 }
 
 .user-profile {
+    margin-top: 100px;
     background-color: #ffffff;
     color: #333333;
     padding: 20px;
@@ -11,7 +12,7 @@ body {
   }
   
   .user-profile h1 {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     display: flex;
     align-items: center;
   }
@@ -36,12 +37,9 @@ body {
   }
 
 .select-container {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
-  }
-  
-.select-container div {
-    margin-bottom: 10px;
   }
   
 .select-container label {
@@ -54,7 +52,7 @@ body {
   }
 
   .shop-preferences-section {
-    margin-top: 20px;
+    margin-top: 50px;
   }
 
   .my-settings-section {
@@ -71,16 +69,14 @@ body {
     font-weight: bold;
   }
 
-  .user-icon {
-    display: inline-block;
-    background-color: #ccc;
+  .renata {
     width: 75px;
     height: 75px;
     border-radius: 50%;
     text-align: center;
     line-height: 75px;
     margin-right: 10px;
-    font-size: 35px;
+    object-fit: cover;
   }
 
   .support-section {

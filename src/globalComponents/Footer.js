@@ -9,7 +9,7 @@ function Footer() {
         <Container fluid>
           <Row>
             <Col md={3} className="d-flex justify-content-center">
-              <Link to="/about" className="text-light mx-2">About</Link>
+              <Link to="/About" className="text-light mx-2">About</Link>
             </Col>
             <Col md={3} className="d-flex justify-content-center">
               <Link to="/FAQs" className="text-light mx-2">FAQs</Link>

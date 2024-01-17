@@ -4,6 +4,8 @@ import Accordion from 'react-bootstrap/Accordion';
 import NavBar from '../globalComponents/NavBar';
 import './FAQs.css';
 import Footer from '../globalComponents/Footer';
+import chart from '../chart.png';
+
 
 function FAQs() {
   const circleStyle1 = {
@@ -72,8 +74,26 @@ function FAQs() {
       <NavBar />
       <div className="accordion-container">
       <h2 style={{ textAlign: 'left', marginBottom: '20px' }}>FAQs - Identifying Sustainable Clothing and Certifications</h2>
-        <Accordion defaultActiveKey="1" onSelect={toggleItem}>
+      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+        <img src={chart} alt="Sustainable Clothing Certifications Chart" style={{ maxWidth: '50%', height: 'auto' }} />
+      </div>
+        <Accordion defaultActiveKey="0" onSelect={toggleItem}>
         <Accordion.Item eventKey="1">
+        <Accordion.Item eventKey="0">
+          <Accordion.Header>
+            <div style={{ textAlign: 'left', marginLeft: '10px' }}>
+              What are these charts and what are they used for? What does each colour mean?
+            </div>
+          </Accordion.Header>
+          <Accordion.Body>
+            <div style={{ textAlign: 'Left' }}>
+              <div>
+              The clothes available on our platform are categorized based on the certifications that represent them and which also identify the clothes through graphics and their respective colors that identify how sustainable a garment is based on the predominance of its colors, as we can see below.
+              </div>
+            </div>
+          </Accordion.Body>
+        </Accordion.Item>
+
         <Accordion.Header>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             {openItem !== "1" && ( 
@@ -238,6 +258,7 @@ function FAQs() {
       </Accordion>
       <p style={{ marginTop: '20px' }}>These categories cover a range of certifications addressing environmental impact, ethical manufacturing, animal welfare, and workplace conditions in the textile industry.</p>
     </div>
+    <Footer />
     </div>
   );
 }
