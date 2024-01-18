@@ -113,7 +113,6 @@ const ShoppingCart = () => {
                             alt={item.title}
                             style={{ width: '50px' }}
                           />
-                          {/* {item.title} -  */}
                           {item.color}, {item.size} - €{item.price}
                         </div>
                         <div className="d-flex flex-column align-items-center justify-content-start">
