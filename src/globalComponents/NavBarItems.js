@@ -174,8 +174,8 @@ const ChevronLeft = styled.span`
 `;
 
 const IconSvg = styled.img`
-  width: 2rem;
-  height: 2rem;
+  width: 1.2rem;
+  height: 1.2rem;
   cursor: pointer;
 `;
 
@@ -358,7 +358,7 @@ const NavBarItems = ({
       )}
       {isMobile && (
         <div>
-          <NoHasSubCategory to="#" className="d-flex align-items-center">
+          <NoHasSubCategory to="/profile" className="d-flex align-items-center">
             <IconSvg src={Profile} />
             <span className="ms-2 text-uppercase">
               {language.globalTexts.myAccount}

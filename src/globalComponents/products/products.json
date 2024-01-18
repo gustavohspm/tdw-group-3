@@ -5,9 +5,15 @@
     "title": "Vestido Floral",
     "price": 59.99,
     "sizes": ["S", "M", "L"],
-    "colors": ["Floral"],
+    "colors": [
+      {
+        "name": "Floral",
+        "hex": "#ffffff"
+      }
+    ],
     "brand": "FashionStyle",
     "category": "feminino",
+    "description": "Descrição do Vestido Floral.",
     "sustainableData": {
       "organic": [
         "gots",
@@ -51,9 +57,19 @@
     "title": "Sapato de Salto Alto",
     "price": 89.99,
     "sizes": ["36", "37", "38", "39"],
-    "colors": ["Preto", "Vermelho"],
+    "colors": [
+      {
+        "name": "Preto",
+        "hex": "#000000"
+      },
+      {
+        "name": "Vermelho",
+        "hex": "#ff0000"
+      }
+    ],
     "brand": "Zara",
     "category": "feminino",
+    "description": "Descrição do Sapato de Salto Alto.",
     "sustainableData": {
       "organic": [
         "gots",
@@ -86,9 +102,47 @@
     "title": "Bolsa",
     "price": 19.99,
     "sizes": ["Único"],
-    "colors": ["Marrom", "Caramelo"],
+    "colors": [
+      {
+        "name": "Marrom",
+        "hex": "#8b4513"
+      },
+      {
+        "name": "Caramelo",
+        "hex": "#d2691e"
+      }
+    ],
     "brand": "Nalu",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição da Bolsa.",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [],
+      "resources": [
+        "blue",
+        "sfa",
+        {
+          "colorSection": "#61BEAD"
+        }
+      ],
+      "animalwelfare": [
+        "rws",
+        {
+          "colorSection": "#628FC5"
+        }
+      ],
+      "workconditions": [
+        "fwf",
+        {
+          "colorSection": "#B39AC7"
+        }
+      ]
+    }
   },
   {
     "id": 4,
@@ -96,9 +150,38 @@
     "title": "Blusa de Algodão",
     "price": 29.99,
     "sizes": ["S", "M", "L"],
-    "colors": ["Rosa", "Branco"],
+    "colors": [
+      {
+        "name": "Rosa",
+        "hex": "#ffc0cb"
+      },
+      {
+        "name": "Branco",
+        "hex": "#ffffff"
+      }
+    ],
     "brand": "CasualWear",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição da Blusa de Algodão.",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [],
+      "resources": [],
+      "animalwelfare": [
+        "rws",
+        "rds",
+        {
+          "colorSection": "#628FC5"
+        }
+      ],
+      "workconditions": []
+    }
   },
   {
     "id": 5,
@@ -106,9 +189,27 @@
     "title": "Sandália Rasteira",
     "price": 39.99,
     "sizes": ["35", "36", "37", "38"],
-    "colors": ["Preto", "Branco"],
+    "colors": [
+      {
+        "name": "Preto",
+        "hex": "#000000"
+      },
+      {
+        "name": "Branco",
+        "hex": "#ffffff"
+      }
+    ],
     "brand": "SummerFootwear",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição da Sandália Rasteira.",
+    "sustainableData": {
+      "workconditions": [
+        "fwf",
+        {
+          "colorSection": "#B39AC7"
+        }
+      ]
+    }
   },
   {
     "id": 6,
@@ -116,9 +217,36 @@
     "title": "Calça de Alfaiataria",
     "price": 29.99,
     "sizes": ["36", "38", "40"],
-    "colors": ["Cinza"],
+    "colors": [
+      {
+        "name": "Cinza",
+        "hex": "#808080"
+      }
+    ],
     "brand": "DenimStyle",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição da Calça de Alfaiataria.",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "resources": [
+        "blue",
+        {
+          "colorSection": "#61BEAD"
+        }
+      ],
+      "animalwelfare": [
+        "rws",
+        {
+          "colorSection": "#628FC5"
+        }
+      ]
+    }
   },
   {
     "id": 7,
@@ -126,9 +254,44 @@
     "title": "Camisola de Tricô",
     "price": 19.99,
     "sizes": ["S", "M", "L"],
-    "colors": ["Branca"],
+    "colors": [
+      {
+        "name": "Branca",
+        "hex": "#ffffff"
+      }
+    ],
     "brand": "JewelCraft",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição da Camisola de Tricô.",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [
+        "ftts",
+        "wrap",
+        {
+          "colorSection": "#EDD57F"
+        }
+      ],
+      "animalwelfare": [
+        "rws",
+        "rds",
+        {
+          "colorSection": "#628FC5"
+        }
+      ],
+      "workconditions": [
+        "fwf",
+        {
+          "colorSection": "#B39AC7"
+        }
+      ]
+    }
   },
   {
     "id": 8,
@@ -136,9 +299,41 @@
     "title": "Saia Midi",
     "price": 54.99,
     "sizes": ["S", "M", "L"],
-    "colors": ["Cinza", "Preto"],
+    "colors": [
+      {
+        "name": "Cinza",
+        "hex": "#808080"
+      },
+      {
+        "name": "Preto",
+        "hex": "#000000"
+      }
+    ],
     "brand": "ElegantFashion",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição da Saia Midi.",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [
+        "ftts",
+        "wrap",
+        {
+          "colorSection": "#EDD57F"
+        }
+      ],
+      "resources": [
+        "blue",
+        {
+          "colorSection": "#61BEAD"
+        }
+      ]
+    }
   },
   {
     "id": 9,
@@ -146,9 +341,41 @@
     "title": "Casaco",
     "price": 79.99,
     "sizes": ["Único"],
-    "colors": ["Branco"],
+    "colors": [
+      {
+        "name": "Branco",
+        "hex": "#ffffff"
+      }
+    ],
     "brand": "UrbanExplorer",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição do Casaco.",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [
+        "ftts",
+        {
+          "colorSection": "#EDD57F"
+        }
+      ],
+      "animalwelfare": [
+        "rds",
+        {
+          "colorSection": "#628FC5"
+        }
+      ],
+      "workconditions": [
+        "fwf",
+        {
+          "colorSection": "#B39AC7"
+        }
+      ]
+    }
   },
   {
     "id": 10,
@@ -156,8 +383,36 @@
     "title": "Vestido de Festa Longo",
     "price": 129.99,
     "sizes": ["S", "M", "L"],
-    "colors": ["Flora"],
+    "colors": [
+      {
+        "name": "Floral",
+        "hex": "#ffffff"
+      }
+    ],
     "brand": "GlamourDress",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição do Vestido de Festa Longo.",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [
+        "ftts",
+        "wrap",
+        {
+          "colorSection": "#EDD57F"
+        }
+      ],
+      "workconditions": [
+        "fwf",
+        {
+          "colorSection": "#B39AC7"
+        }
+      ]
+    }
   }
 ]

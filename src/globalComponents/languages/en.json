@@ -8,12 +8,9 @@
     "myAccount": "My Account"
   },
   "splashScreen": {
-    "firstImageTitle": "English 1",
-    "secondImageTitle": "English 2",
-    "thirdImageTitle": "English 3",
-    "firstImageDescription": "English Description 1",
-    "secondImageDescription": "English Description 2",
-    "thirdImageDescription": "English Description 3"
+    "firstImage": "../assets/firstInfoEN.jpeg",
+    "secondImage": "../assets/secondInfoEN.jpeg",
+    "thirdImage": "../assets/thirdInfoEN.jpeg"
   },
   "menu": {
     "certifications": {

@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import { Link } from "react-router-dom";
-import "../App.css";
-import PieGraphics from "./PieGraphics";
+import { Link } from 'react-router-dom';
+import '../App.css';
+import PieGraphics from './PieGraphics';
+import { FaTimes } from 'react-icons/fa';
 
 const ModalOverlay = styled.div`
   position: fixed;
@@ -23,7 +24,7 @@ const ModalContent = styled.div`
   background: #fff;
   padding: 32px;
   border-radius: 8px;
-  max-width: 70vw;
+  max-width: 60vw;
   width: 100%;
   text-align: center;
   position: relative;
@@ -40,6 +41,12 @@ const CloseButton = styled.button`
   position: absolute;
   top: 10px;
   right: 10px;
+  border: none;
+  background: none;
+`;
+
+const LinkContainer = styled(Link)`
+  text-decoration: none;
 `;
 
 const CardDetails = ({ id, title, image, price, brand, sustainableData }) => {
@@ -54,19 +61,21 @@ const CardDetails = ({ id, title, image, price, brand, sustainableData }) => {
     setModalOpen(false);
   };
 
-
   return (
     <div
       className="card card-hover mb-4 rounded-0 border-0 custom-card"
-      style={{ maxWidth: "300px", height: "350px" }}
+      style={{ maxWidth: '300px', height: '350px' }}
     >
-      <img
-        src={image}
-        alt={title}
-        className="card-img-top rounded-0 custom-image"
-      />
-      {/* <Link to={`/product/${id}`} className="position-relative d-block">
-      </Link> */}
+      <LinkContainer
+        to={`/product/${id}`}
+        className="position-relative d-block"
+      >
+        <img
+          src={image}
+          alt={title}
+          className="card-img-top rounded-0 custom-image"
+        />
+      </LinkContainer>
       <div className="card-body row d-flex justify-content-between">
         <div className="col-lg-6 col-sm-12">
           <p className="card-text">€ {price} </p>
@@ -76,7 +85,10 @@ const CardDetails = ({ id, title, image, price, brand, sustainableData }) => {
         </div>
         <div className="col-lg-6 col-sm-12">
           {sustainableData && (
-            <button onClick={() => setModalOpen(true)} className="border-0 bg-transparent">
+            <button
+              onClick={() => setModalOpen(true)}
+              className="border-0 bg-transparent"
+            >
               <PieGraphics sustainableData={sustainableData} size={32} />
             </button>
           )}
@@ -84,27 +96,29 @@ const CardDetails = ({ id, title, image, price, brand, sustainableData }) => {
       </div>
       <div className="card-body">
         <div
-          className={`favorite-star ${favorited ? "favorited" : ""}`}
+          className={`favorite-star ${favorited ? 'favorited' : ''}`}
           onClick={handleToggleFavorite}
         >
-          &#9733;
+          <i className="bi bi-star" />
         </div>
       </div>
-      { modalOpen && (
-
+      {modalOpen && (
         <ModalOverlay>
-        <ModalContent>
-          <CloseButton onClick={onClose}>X</CloseButton>
-          <div className="d-flex justify-content-center flex-column mb-1">
-            {" "}
-            <h5 className="text-center">
-            {title} | {brand}
-            </h5>{" "}
-            <PieGraphics sustainableData={sustainableData} size={200} />
-          </div>
-        </ModalContent>
+          <ModalContent>
+            <CloseButton onClick={onClose}>
+              {' '}
+              <FaTimes style={{ fontSize: 'xx-large' }} />
+            </CloseButton>
+            <div className="d-flex justify-content-center flex-column mb-1">
+              {' '}
+              <h5 className="text-center">
+                {title} | {brand}
+              </h5>{' '}
+              <PieGraphics sustainableData={sustainableData} size={200} />
+            </div>
+          </ModalContent>
         </ModalOverlay>
-        )}
+      )}
     </div>
   );
 };
