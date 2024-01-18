@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import '../App.css';
+import Footer from '../globalComponents/Footer';
 
 const ProductDetails = ({ products }) => {
   const { id } = useParams();
@@ -38,6 +39,7 @@ const ProductDetails = ({ products }) => {
           &#9733;
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
