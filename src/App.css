@@ -38,7 +38,8 @@
 }
 
 .card-hover:hover {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);  /* Adiciona uma sombra sutil no hover */
+  /* box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);  */
+   /* Adiciona uma sombra sutil no hover */
   transition: box-shadow 0.3s ease;  /* Adiciona uma transição suave à sombra */
 }
 

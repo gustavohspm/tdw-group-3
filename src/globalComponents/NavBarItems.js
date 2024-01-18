@@ -24,7 +24,7 @@ const Category = styled.div`
         transform: unset;
       }
     `}
-
+    
   &:hover {
     color: var(--grey-palette-color-text);
   }
