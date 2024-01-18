@@ -5,6 +5,7 @@ import Navbar from '../globalComponents/NavBar';
 import '../App.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { useShoppingCart } from '../globalComponents/ShoppingCartContext';
+import Footer from '../globalComponents/Footer';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -186,6 +187,7 @@ const ProductDetails = () => {
       >
         Add to Cart
       </button>
+      <Footer />
     </div>
   );
 };

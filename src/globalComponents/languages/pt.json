@@ -8,12 +8,9 @@
     "myAccount": "Minha Conta"
   },
   "splashScreen": {
-    "firstImageTitle": "Português 1",
-    "secondImageTitle": "Português 2",
-    "thirdImageTitle": "Português 3",
-    "firstImageDescription": "Português Descrição 1",
-    "secondImageDescription": "Português Descrição 2",
-    "thirdImageDescription": "Português Descrição 3"
+    "firstImage": "../assets/firstInfoPT.jpeg",
+    "secondImage": "../assets/secondInfoPT.jpeg",
+    "thirdImage": "../assets/thirdInfoPT.jpeg"
   },
   "menu": {
     "certifications": {

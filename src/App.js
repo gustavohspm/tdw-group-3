@@ -7,6 +7,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import FAQs from './components/FAQs';
 import ShoppingCart from './components/ShoppingCart';
 import { ShoppingCartProvider } from './globalComponents/ShoppingCartContext';
+import Profile from './components/Profile';
+import About from './components/About';
+import Checkout from './components/Checkout';
 
 export default function App() {
   return (
@@ -18,6 +21,10 @@ export default function App() {
         <Route path="/FAQs" element={<FAQs />} />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<ShoppingCart />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Checkout" element={<Checkout />} />
       </Routes>
       {/* </ShoppingCartProvider> */}
     </Router>

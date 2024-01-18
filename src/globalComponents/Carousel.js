@@ -1,22 +1,16 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 const CarouselContainer = styled.div`
   position: relative;
   width: 100%;
 `;
 
-const ImageWrapper = styled.div`
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-`;
-
 const Image = styled.img`
   width: 100%;
-  height: 50vh;
+  max-height: 72vh;
   object-fit: cover;
 `;
 
@@ -33,7 +27,7 @@ const DescriptionWrapper = styled.div`
   bottom: 40px;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.8);
 `;
 
 const Description = styled.p`
@@ -51,33 +45,51 @@ const NavButtons = styled.div`
   justify-content: space-between;
 `;
 
-const NavButton = styled.button`
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
-  color: white;
-`;
-
 const DotsContainer = styled.div`
   position: absolute;
-  bottom: 10px;
+  bottom: -8px;
   width: 100%;
   text-align: center;
 `;
 
 const Dot = styled.span`
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 16px;
+  height: 16px;
   background-color: ${(props) => (props.active ? "#fff" : "#999")};
   border-radius: 50%;
   margin: 0 5px;
   cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+`;
+
+const ChevronRight = styled.span`
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+  padding: .5rem;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+`;
+
+const ChevronLeft = styled.span`
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+  padding: .5rem;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
 `;
 
 const Carousel = ({ images, autoPlay }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const ImageWrapper = styled.div`
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-top: ${(autoPlay) => (autoPlay ? "0" : "-24px")};
+    margin-bottom: 32px;
+  `;
 
   useEffect(() => {
     let interval;
@@ -87,7 +99,7 @@ const Carousel = ({ images, autoPlay }) => {
         const newIndex =
           currentImageIndex >= images.length - 1 ? 0 : currentImageIndex + 1;
         setCurrentImageIndex(newIndex);
-      }, 4000);
+      }, 6000);
     }
 
     return () => clearInterval(interval);
@@ -109,9 +121,11 @@ const Carousel = ({ images, autoPlay }) => {
     setCurrentImageIndex(index);
   };
 
+  const height = autoPlay ? "50vh" : "unset";
+
   return (
     <CarouselContainer>
-      <ImageWrapper>
+      <ImageWrapper style={{ height: height }}>
         {images.length > 0 && (
           <>
             {images[currentImageIndex].title && (
@@ -119,7 +133,7 @@ const Carousel = ({ images, autoPlay }) => {
             )}
             <Image
               src={images[currentImageIndex].url}
-              alt={`Slide ${currentImageIndex + 1}`}
+              alt={`Slide ${currentImageIndex}`}
             />
             {images[currentImageIndex].description && (
               <DescriptionWrapper>
@@ -128,13 +142,17 @@ const Carousel = ({ images, autoPlay }) => {
                 </Description>
               </DescriptionWrapper>
             )}
-            <NavButtons>
-              <NavButton onClick={prevSlide}>&lt;</NavButton>
-              <NavButton onClick={nextSlide}>&gt;</NavButton>
-            </NavButtons>
           </>
         )}
       </ImageWrapper>
+      <NavButtons>
+        <ChevronLeft onClick={prevSlide}>
+          <FaChevronLeft style={{ fontSize: "xx-large" }} />
+        </ChevronLeft>
+        <ChevronRight onClick={nextSlide}>
+          <FaChevronRight style={{ fontSize: "xx-large" }} />
+        </ChevronRight>
+      </NavButtons>
       {images.length > 1 && (
         <DotsContainer>
           {images.map((_, index) => (

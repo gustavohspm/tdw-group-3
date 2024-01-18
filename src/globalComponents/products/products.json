@@ -13,7 +13,43 @@
     ],
     "brand": "FashionStyle",
     "category": "feminino",
-    "description": "Descrição do Vestido Floral."
+    "description": "Descrição do Vestido Floral.",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [
+        "ftts",
+        "wrap",
+        {
+          "colorSection": "#EDD57F"
+        }
+      ],
+      "resources": [
+        "blue",
+        "sfa",
+        {
+          "colorSection": "#61BEAD"
+        }
+      ],
+      "animalwelfare": [
+        "rws",
+        "rds",
+        {
+          "colorSection": "#628FC5"
+        }
+      ],
+      "workconditions": [
+        "fwf",
+        {
+          "colorSection": "#B39AC7"
+        }
+      ]
+    }
   },
   {
     "id": 2,
@@ -33,7 +69,32 @@
     ],
     "brand": "Zara",
     "category": "feminino",
-    "description": "Descrição do Sapato de Salto Alto."
+    "description": "Descrição do Sapato de Salto Alto.",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [
+        "ftts",
+        "wrap",
+        {
+          "colorSection": "#EDD57F"
+        }
+      ],
+      "resources": [
+        "blue",
+        "sfa",
+        {
+          "colorSection": "#61BEAD"
+        }
+      ],
+      "animalwelfare": [],
+      "workconditions": []
+    }
   },
   {
     "id": 3,
@@ -53,7 +114,35 @@
     ],
     "brand": "Nalu",
     "category": "feminino",
-    "description": "Descrição da Bolsa."
+    "description": "Descrição da Bolsa.",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [],
+      "resources": [
+        "blue",
+        "sfa",
+        {
+          "colorSection": "#61BEAD"
+        }
+      ],
+      "animalwelfare": [
+        "rws",
+        {
+          "colorSection": "#628FC5"
+        }
+      ],
+      "workconditions": [
+        "fwf",
+        {
+          "colorSection": "#B39AC7"
+        }
+      ]
+    }
   },
   {
     "id": 4,
@@ -73,7 +162,26 @@
     ],
     "brand": "CasualWear",
     "category": "feminino",
-    "description": "Descrição da Blusa de Algodão."
+    "description": "Descrição da Blusa de Algodão.",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [],
+      "resources": [],
+      "animalwelfare": [
+        "rws",
+        "rds",
+        {
+          "colorSection": "#628FC5"
+        }
+      ],
+      "workconditions": []
+    }
   },
   {
     "id": 5,
@@ -93,7 +201,15 @@
     ],
     "brand": "SummerFootwear",
     "category": "feminino",
-    "description": "Descrição da Sandália Rasteira."
+    "description": "Descrição da Sandália Rasteira.",
+    "sustainableData": {
+      "workconditions": [
+        "fwf",
+        {
+          "colorSection": "#B39AC7"
+        }
+      ]
+    }
   },
   {
     "id": 6,
@@ -109,7 +225,28 @@
     ],
     "brand": "DenimStyle",
     "category": "feminino",
-    "description": "Descrição da Calça de Alfaiataria."
+    "description": "Descrição da Calça de Alfaiataria.",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "resources": [
+        "blue",
+        {
+          "colorSection": "#61BEAD"
+        }
+      ],
+      "animalwelfare": [
+        "rws",
+        {
+          "colorSection": "#628FC5"
+        }
+      ]
+    }
   },
   {
     "id": 7,
@@ -125,7 +262,36 @@
     ],
     "brand": "JewelCraft",
     "category": "feminino",
-    "description": "Descrição da Camisola de Tricô."
+    "description": "Descrição da Camisola de Tricô.",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [
+        "ftts",
+        "wrap",
+        {
+          "colorSection": "#EDD57F"
+        }
+      ],
+      "animalwelfare": [
+        "rws",
+        "rds",
+        {
+          "colorSection": "#628FC5"
+        }
+      ],
+      "workconditions": [
+        "fwf",
+        {
+          "colorSection": "#B39AC7"
+        }
+      ]
+    }
   },
   {
     "id": 8,
@@ -145,7 +311,29 @@
     ],
     "brand": "ElegantFashion",
     "category": "feminino",
-    "description": "Descrição da Saia Midi."
+    "description": "Descrição da Saia Midi.",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [
+        "ftts",
+        "wrap",
+        {
+          "colorSection": "#EDD57F"
+        }
+      ],
+      "resources": [
+        "blue",
+        {
+          "colorSection": "#61BEAD"
+        }
+      ]
+    }
   },
   {
     "id": 9,
@@ -161,7 +349,33 @@
     ],
     "brand": "UrbanExplorer",
     "category": "feminino",
-    "description": "Descrição do Casaco."
+    "description": "Descrição do Casaco.",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [
+        "ftts",
+        {
+          "colorSection": "#EDD57F"
+        }
+      ],
+      "animalwelfare": [
+        "rds",
+        {
+          "colorSection": "#628FC5"
+        }
+      ],
+      "workconditions": [
+        "fwf",
+        {
+          "colorSection": "#B39AC7"
+        }
+      ]
+    }
   },
   {
     "id": 10,
@@ -177,6 +391,28 @@
     ],
     "brand": "GlamourDress",
     "category": "feminino",
-    "description": "Descrição do Vestido de Festa Longo."
+    "description": "Descrição do Vestido de Festa Longo.",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [
+        "ftts",
+        "wrap",
+        {
+          "colorSection": "#EDD57F"
+        }
+      ],
+      "workconditions": [
+        "fwf",
+        {
+          "colorSection": "#B39AC7"
+        }
+      ]
+    }
   }
 ]
