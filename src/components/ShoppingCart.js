@@ -1,10 +1,10 @@
-import React from 'react';
-import { useShoppingCart } from '../globalComponents/ShoppingCartContext';
-import Navbar from '../globalComponents/NavBar';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { FaTrash } from 'react-icons/fa';
-import { Button } from 'react-bootstrap'; // Importe o componente do Bootstrap
+import React from "react";
+import { useShoppingCart } from "../globalComponents/ShoppingCartContext";
+import Navbar from "../globalComponents/NavBar";
+import { FaTrash } from "react-icons/fa";
+import PieGraphics from "../globalComponents/PieGraphics";
+import AveragePieGraphics from "../globalComponents/AveragePieGraphics";
+import chart from "../chart.png";
 
 const ShoppingCart = () => {
   const { cart, addItem, removeItem, decreaseItemQuantity } = useShoppingCart();
@@ -15,6 +15,7 @@ const ShoppingCart = () => {
 
   const handleIncreaseQuantity = (itemId) => {
     const item = cart.find((item) => item.id === itemId);
+    console.log(item);
     if (item) {
       addItem(item, 1);
     }
@@ -27,7 +28,7 @@ const ShoppingCart = () => {
   return (
     <div>
       <Navbar />
-      <h2 style={{ marginTop: '80px' }}>Shopping Cart</h2>
+      <h2 style={{ marginTop: "80px" }}>Shopping Cart</h2>
       <ul>
         {cart.map((item) => (
           <li key={item.id}>
@@ -35,21 +36,13 @@ const ShoppingCart = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                style={{ width: '50px' }}
+                style={{ width: "50px" }}
               />
               {item.title} - {item.color}, {item.size} - €{item.price}
+              <PieGraphics sustainableData={item?.sustainableData} size={32} />
             </div>
             <div>
-              {/* Botão de contagem personalizado */}
               <span>{item.quantity}</span>
-              {/* <Button
-                variant="outline-secondary"
-                disabled
-                style={{ width: '30px' }}
-              >
-
-              </Button> */}
-              {/* Botão de remover com ícone de lixeira */}
               <button onClick={() => handleRemoveItem(item.id)}>
                 <FaTrash />
               </button>
@@ -59,6 +52,14 @@ const ShoppingCart = () => {
           </li>
         ))}
       </ul>
+      <div className="d-flex flex-column align-items-center justify-content-center" style={{ textAlign: "center", marginBottom: "20px" }}>
+        <img
+          src={chart}
+          alt="Sustainable Clothing Certifications Chart"
+          style={{ maxWidth: "50%", height: "auto" }}
+        />
+        <span>Média: Leafeel!</span>
+      </div>
     </div>
   );
 };

@@ -6,7 +6,8 @@ import styled from 'styled-components';
 
 const ClothCard = ({ products }) => {
   return (
-    <div className="row">
+    <div className="row mt-5">
+      <h3 className='d-flex justify-content-center mb-4'>PRODUTOS</h3>
       {products.map((product) => (
         <div
           className="col-md-3 col-6 d-flex justify-content-center align-items-center"
