@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import Cookies from "js-cookie";
 import { Modal, Button } from "react-bootstrap";
 import SplashScreen from "./SplashScreen";
+import Footer from '../globalComponents/Footer';
 
 const Home = () => {
   const images = [
@@ -63,6 +64,7 @@ const Home = () => {
           <Carousel images={images} autoPlay={true} />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
