@@ -1,16 +1,16 @@
-import React, { useState, useEffect, useRef } from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import MenuHamburguerButton from "./MenuHamburguerButton";
-import NavBarItems from "./NavBarItems";
-import LanguageButton from "./LanguageButton";
+import React, { useState, useEffect, useRef } from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import MenuHamburguerButton from './MenuHamburguerButton';
+import NavBarItems from './NavBarItems';
+import LanguageButton from './LanguageButton';
 
-import blackLogo from "../assets/leafeel_black.png";
-import { FaSearch } from "react-icons/fa";
-import { useLanguage } from "./LanguageContext";
-import ShoppingCart from "../assets/shoppingcart.svg";
-import Star from "../assets/star.svg";
-import Profile from "../assets/user.svg";
+import blackLogo from '../assets/leafeel_black.png';
+import { FaSearch } from 'react-icons/fa';
+import { useLanguage } from './LanguageContext';
+import ShoppingCart from '../assets/shoppingcart.svg';
+import Star from '../assets/star.svg';
+import Profile from '../assets/user.svg';
 
 const Container = styled.div`
   display: flex;
@@ -30,7 +30,7 @@ const Container = styled.div`
 const Logo = styled.div`
   transition: opacity 0.5s ease-in-out;
   @media (max-width: 810px) {
-    opacity: ${(props) => (props.visible ? "1" : "0")};
+    opacity: ${(props) => (props.visible ? '1' : '0')};
   }
 `;
 
@@ -58,7 +58,7 @@ const NavElements = styled.div`
     left: 0;
     top: 60px;
     background-color: var(--white-palette-color);
-    width: ${({ isOpen }) => (isOpen ? "270px" : "0px")};
+    width: ${({ isOpen }) => (isOpen ? '270px' : '0px')};
     height: 100vh;
     transition: width 0.3s ease-in;
     overflow: hidden;
@@ -94,8 +94,8 @@ const SearchIcon = styled(FaSearch)`
 const SearchInput = styled.input`
   position: absolute;
   right: 0;
-  width: ${(props) => (props.visible ? "180px" : "0")};
-  opacity: ${(props) => (props.visible ? "1" : "0")};
+  width: ${(props) => (props.visible ? '180px' : '0')};
+  opacity: ${(props) => (props.visible ? '1' : '0')};
   transition:
     width 0.5s ease-in-out,
     opacity 0.5s ease-in-out;
@@ -103,7 +103,7 @@ const SearchInput = styled.input`
   outline: none;
   cursor: text;
 
-    @media (max-width: 810px) {
+  @media (max-width: 810px) {
     right: auto;
     left: 0;
   }
@@ -150,15 +150,15 @@ const NavBar = () => {
     {
       name: language.menu.woman.header,
       disabled: false,
-      path: "/woman",
+      path: '/woman',
       subcategories: [
-        { name: language.menu.woman.item0, path: "" },
-        { name: language.menu.woman.item1, path: "/trousers" },
-        { name: language.menu.woman.item2, path: "/dresses" },
-        { name: language.menu.woman.item3, path: "/shoes" },
-        { name: language.menu.woman.item4, path: "/bags" },
-        { name: language.menu.woman.item5, path: "/blouses" },
-        { name: language.menu.woman.item6, path: "/coats" },
+        { name: language.menu.woman.item0, path: '' },
+        { name: language.menu.woman.item1, path: '/trousers' },
+        { name: language.menu.woman.item2, path: '/dresses' },
+        { name: language.menu.woman.item3, path: '/shoes' },
+        { name: language.menu.woman.item4, path: '/bags' },
+        { name: language.menu.woman.item5, path: '/blouses' },
+        { name: language.menu.woman.item6, path: '/coats' },
       ],
     },
 
@@ -183,14 +183,14 @@ const NavBar = () => {
     {
       name: language.menu.brands.header,
       disabled: false,
-      path: "/brands",
+      path: '/brands',
       subcategories: [
-        { name: "AAAAAA", path: "/aaaaaa" },
-        { name: "BBBBBB", path: "/bbbbbb" },
-        { name: "CCCCCC", path: "/cccccc" },
-        { name: "DDDDDD", path: "/dddddd" },
-        { name: "EEEEEE", path: "/eeeeee" },
-        { name: "FFFFFF", path: "/ffffff" },
+        { name: 'AAAAAA', path: '/aaaaaa' },
+        { name: 'BBBBBB', path: '/bbbbbb' },
+        { name: 'CCCCCC', path: '/cccccc' },
+        { name: 'DDDDDD', path: '/dddddd' },
+        { name: 'EEEEEE', path: '/eeeeee' },
+        { name: 'FFFFFF', path: '/ffffff' },
       ],
     },
   ];
@@ -214,10 +214,10 @@ const NavBar = () => {
   };
 
   useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
@@ -228,10 +228,10 @@ const NavBar = () => {
       }
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -239,7 +239,7 @@ const NavBar = () => {
     <Container>
       <Link to="/">
         <Logo className="px-4" visible={!searchVisible}>
-          <img src={blackLogo} style={{ width: "8rem" }} />
+          <img src={blackLogo} style={{ width: '8rem' }} />
         </Logo>
       </Link>
       <div className="d-flex align-items-center order-first">
@@ -271,7 +271,7 @@ const NavBar = () => {
         />
         <NavLinkItem
           style={{
-            paddingLeft: window.innerWidth < 810 ? "1.4rem" : "0",
+            paddingLeft: window.innerWidth < 810 ? '1.4rem' : '0',
           }}
         >
           <LanguageButton />
@@ -290,17 +290,17 @@ const NavBar = () => {
           </SearchContainer>
         )}
         <StyledLink to="#" className="px-3">
-          <IconSvg src={ Star } />
+          <IconSvg src={Star} />
         </StyledLink>
         <StyledLink
-          to="#"
-          className={window.innerWidth > 810 ? "px-3" : "ps-3"}
+          to="/cart"
+          className={window.innerWidth > 810 ? 'px-3' : 'ps-3'}
         >
-          <IconShopSvg src={ ShoppingCart } />
+          <IconShopSvg src={ShoppingCart} />
         </StyledLink>
         {window.innerWidth > 810 && (
           <StyledLink to="#" className="ps-3 pe-4">
-            <IconProfileSvg src={ Profile } />
+            <IconProfileSvg src={Profile} />
           </StyledLink>
         )}
       </div>
@@ -309,4 +309,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-

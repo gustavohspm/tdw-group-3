@@ -5,9 +5,15 @@
     "title": "Vestido Floral",
     "price": 59.99,
     "sizes": ["S", "M", "L"],
-    "colors": ["Floral"],
+    "colors": [
+      {
+        "name": "Floral",
+        "hex": "#ffffff"
+      }
+    ],
     "brand": "FashionStyle",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição do Vestido Floral."
   },
   {
     "id": 2,
@@ -15,9 +21,19 @@
     "title": "Sapato de Salto Alto",
     "price": 89.99,
     "sizes": ["36", "37", "38", "39"],
-    "colors": ["Preto", "Vermelho"],
+    "colors": [
+      {
+        "name": "Preto",
+        "hex": "#000000"
+      },
+      {
+        "name": "Vermelho",
+        "hex": "#ff0000"
+      }
+    ],
     "brand": "Zara",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição do Sapato de Salto Alto."
   },
   {
     "id": 3,
@@ -25,9 +41,19 @@
     "title": "Bolsa",
     "price": 19.99,
     "sizes": ["Único"],
-    "colors": ["Marrom", "Caramelo"],
+    "colors": [
+      {
+        "name": "Marrom",
+        "hex": "#8b4513"
+      },
+      {
+        "name": "Caramelo",
+        "hex": "#d2691e"
+      }
+    ],
     "brand": "Nalu",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição da Bolsa."
   },
   {
     "id": 4,
@@ -35,9 +61,19 @@
     "title": "Blusa de Algodão",
     "price": 29.99,
     "sizes": ["S", "M", "L"],
-    "colors": ["Rosa", "Branco"],
+    "colors": [
+      {
+        "name": "Rosa",
+        "hex": "#ffc0cb"
+      },
+      {
+        "name": "Branco",
+        "hex": "#ffffff"
+      }
+    ],
     "brand": "CasualWear",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição da Blusa de Algodão."
   },
   {
     "id": 5,
@@ -45,9 +81,19 @@
     "title": "Sandália Rasteira",
     "price": 39.99,
     "sizes": ["35", "36", "37", "38"],
-    "colors": ["Preto", "Branco"],
+    "colors": [
+      {
+        "name": "Preto",
+        "hex": "#000000"
+      },
+      {
+        "name": "Branco",
+        "hex": "#ffffff"
+      }
+    ],
     "brand": "SummerFootwear",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição da Sandália Rasteira."
   },
   {
     "id": 6,
@@ -55,9 +101,15 @@
     "title": "Calça de Alfaiataria",
     "price": 29.99,
     "sizes": ["36", "38", "40"],
-    "colors": ["Cinza"],
+    "colors": [
+      {
+        "name": "Cinza",
+        "hex": "#808080"
+      }
+    ],
     "brand": "DenimStyle",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição da Calça de Alfaiataria."
   },
   {
     "id": 7,
@@ -65,9 +117,15 @@
     "title": "Camisola de Tricô",
     "price": 19.99,
     "sizes": ["S", "M", "L"],
-    "colors": ["Branca"],
+    "colors": [
+      {
+        "name": "Branca",
+        "hex": "#ffffff"
+      }
+    ],
     "brand": "JewelCraft",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição da Camisola de Tricô."
   },
   {
     "id": 8,
@@ -75,9 +133,19 @@
     "title": "Saia Midi",
     "price": 54.99,
     "sizes": ["S", "M", "L"],
-    "colors": ["Cinza", "Preto"],
+    "colors": [
+      {
+        "name": "Cinza",
+        "hex": "#808080"
+      },
+      {
+        "name": "Preto",
+        "hex": "#000000"
+      }
+    ],
     "brand": "ElegantFashion",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição da Saia Midi."
   },
   {
     "id": 9,
@@ -85,9 +153,15 @@
     "title": "Casaco",
     "price": 79.99,
     "sizes": ["Único"],
-    "colors": ["Branco"],
+    "colors": [
+      {
+        "name": "Branco",
+        "hex": "#ffffff"
+      }
+    ],
     "brand": "UrbanExplorer",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição do Casaco."
   },
   {
     "id": 10,
@@ -95,8 +169,14 @@
     "title": "Vestido de Festa Longo",
     "price": 129.99,
     "sizes": ["S", "M", "L"],
-    "colors": ["Flora"],
+    "colors": [
+      {
+        "name": "Floral",
+        "hex": "#ffffff"
+      }
+    ],
     "brand": "GlamourDress",
-    "category": "feminino"
+    "category": "feminino",
+    "description": "Descrição do Vestido de Festa Longo."
   }
 ]
