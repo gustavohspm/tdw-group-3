@@ -6,12 +6,14 @@ import '../App.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { useShoppingCart } from '../globalComponents/ShoppingCartContext';
 import Footer from '../globalComponents/Footer';
+import PieGraphics from '../globalComponents/PieGraphics';
 
 const ProductDetails = () => {
   const { id } = useParams();
   const { addItem } = useShoppingCart();
 
   const product = productsData.find((p) => p.id === parseInt(id));
+  console.log(product);
 
   if (!product) {
     return <div>Produto não encontrado.</div>;
@@ -50,6 +52,7 @@ const ProductDetails = () => {
         color: selectedColor,
         colorHex: selectedColorHex,
         size: selectedSize,
+        sustainableData: product.sustainableData
       });
     } else {
       alert('Selecione a cor e o tamanho antes de adicionar ao carrinho');
@@ -59,7 +62,7 @@ const ProductDetails = () => {
   return (
     <div>
       <Navbar />
-      <div className="product-details-container px-2 py-5">
+      <div className="product-details-container px-2 py-5 mt-4">
         <div className="product-image col-lg-6 col-sm-12">
           <img
             src={product.image}
@@ -154,10 +157,13 @@ const ProductDetails = () => {
             </div>
             <button
               onClick={handleAddToCart}
-              className="btn btn-primary w-100 d-none d-sm-block add-to-cart-button"
+              className="btn-primary w-100 rounded-2 d-none d-sm-block add-to-cart-button"
             >
               Add to Cart
             </button>
+            <div className='mt-4 d-flex justify-content-center'>
+              <PieGraphics sustainableData={product.sustainableData} size={204} />
+            </div>
           </div>
         </div>
       </div>

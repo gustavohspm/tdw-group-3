@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import MenuHamburguerButton from './MenuHamburguerButton';
 import NavBarItems from './NavBarItems';
-import LanguageButton from './LanguageButton';
 
 import blackLogo from '../assets/leafeel_black.png';
 import { FaSearch } from 'react-icons/fa';
@@ -245,7 +244,7 @@ const NavBar = () => {
       <NavElements
         isOpen={showNavbar}
         ref={navRef}
-        className={window.innerWidth > 810 ? 'col-4' : ''}
+        className={window.innerWidth > 810 ? 'col-6' : ''}
       >
         <NavBarItems
           categories={categories}
@@ -258,13 +257,12 @@ const NavBar = () => {
             paddingLeft: window.innerWidth < 810 ? '1.4rem' : '0',
           }}
         >
-          <LanguageButton />
         </NavLinkItem>
       </NavElements>
       <div
         className={
           window.innerWidth > 810
-            ? 'col-5 d-flex align-items-center justify-content-end'
+            ? 'col-3 d-flex align-items-center justify-content-end'
             : 'd-flex align-items-center justify-content-around'
         }
       >

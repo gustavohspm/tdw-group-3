@@ -125,7 +125,7 @@ function getSustainabilityConcept(score) {
   };
 }
 
-function PieGraphics({ sustainableData, size }) {
+export function PieGraphics({ sustainableData, size }) {
   const [data, setData] = useState([]);
   const [colors, setColors] = useState([]);
   const [score, setScore] = useState(0);

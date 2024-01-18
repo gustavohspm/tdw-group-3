@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom';
 import { FaTrash } from 'react-icons/fa';
 import { Button } from 'react-bootstrap';
 import styled from 'styled-components';
+import PieGraphics from '../globalComponents/PieGraphics';
+import AveragePieGraphics from '../globalComponents/AveragePieGraphics';
+import chart from '../chart.png';
 
 const CartContainer = styled.div`
   display: flex;
@@ -69,6 +72,7 @@ const ShoppingCart = () => {
 
   const handleIncreaseQuantity = (itemId) => {
     const item = cart.find((item) => item.id === itemId);
+    console.log(item);
     if (item) {
       addItem(item, 1);
     }
@@ -98,6 +102,10 @@ const ShoppingCart = () => {
                         style={{ width: '50px' }}
                       />
                       {item.title} - {item.color}, {item.size} - €{item.price}
+                      <PieGraphics
+                        sustainableData={item?.sustainableData}
+                        size={32}
+                      />
                     </div>
                     <div>
                       <span>{item.quantity}</span>
@@ -114,6 +122,17 @@ const ShoppingCart = () => {
                   </li>
                 ))}
               </ul>
+              <div
+                className="d-flex flex-column align-items-center justify-content-center"
+                style={{ textAlign: 'center', marginBottom: '20px' }}
+              >
+                <img
+                  src={chart}
+                  alt="Sustainable Clothing Certifications Chart"
+                  style={{ maxWidth: '50%', height: 'auto' }}
+                />
+                <span>Média: Leafeel!</span>
+              </div>
               <ContinueButton variant="primary">Continuar</ContinueButton>
             </ItemContainer>
             <TextContainer>
