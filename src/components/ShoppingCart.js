@@ -50,21 +50,23 @@ const ContinueButton = styled(Button)`
   color: #000;
   border: none;
   font-weight: bold;
-  position: relative; /* Posição relativa por padrão */
+  position: relative;
   @media (max-width: 768px) {
-    width: 100%; /* Ocupa 100% da largura em telas pequenas */
-    position: fixed; /* Fixo apenas em telas pequenas */
+    width: 100%;
+    position: fixed;
     bottom: 0;
     right: 0;
     background-color: #a7c7d9;
     color: #000;
     border: none;
     font-weight: bold;
+    margin-botton: 'inherit';
   }
 `;
 
 const ShoppingCart = () => {
   const { cart, addItem, removeItem, decreaseItemQuantity } = useShoppingCart();
+  let total = 0;
 
   const handleRemoveItem = (itemId) => {
     removeItem(itemId);
@@ -93,35 +95,66 @@ const ShoppingCart = () => {
             <ItemContainer>
               <h3>CARRINHO</h3>
               <ul>
-                {cart.map((item) => (
-                  <li key={item.id}>
-                    <div>
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        style={{ width: '50px' }}
-                      />
-                      {item.title} - {item.color}, {item.size} - €{item.price}
-                      <PieGraphics
-                        sustainableData={item?.sustainableData}
-                        size={32}
-                      />
-                    </div>
-                    <div>
-                      <span>{item.quantity}</span>
-                      <button onClick={() => handleRemoveItem(item.id)}>
-                        <FaTrash />
-                      </button>
-                      <button onClick={() => handleDecreaseQuantity(item.id)}>
-                        -
-                      </button>
-                      <button onClick={() => handleIncreaseQuantity(item.id)}>
-                        +
-                      </button>
-                    </div>
-                  </li>
-                ))}
+                {cart.map(
+                  (item) => (
+                    (total += item.price * item.quantity),
+                    (
+                      <li
+                        className="d-flex justify-content-between mb-4"
+                        style={{
+                          listStyle: 'none',
+                          borderBottom: '1px solid #E3D3B2',
+                        }}
+                        key={item.id}
+                      >
+                        <div className="d-flex flex-column">
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                            style={{ width: '50px' }}
+                          />
+                          {/* {item.title} -  */}
+                          {item.color}, {item.size} - €{item.price}
+                        </div>
+                        <div className="d-flex flex-column align-items-center justify-content-start">
+                          <PieGraphics
+                            sustainableData={item?.sustainableData}
+                            size={32}
+                            className="mb-2"
+                          />
+                          <div className="d-flex align-items-center justify-content-start">
+                            <span className="me-4 mt-1">{item.quantity}</span>
+                            <button
+                              className="border-0 bg-transparent me-2 px-1"
+                              onClick={() => handleRemoveItem(item.id)}
+                            >
+                              <FaTrash />
+                            </button>
+                            <button
+                              className="border-1 rounded-1 bg-transparent me-2 px-2"
+                              onClick={() => handleDecreaseQuantity(item.id)}
+                            >
+                              -
+                            </button>
+                            <button
+                              className="border-1 rounded-1 bg-transparent px-2"
+                              onClick={() => handleIncreaseQuantity(item.id)}
+                            >
+                              +
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                    )
+                  ),
+                )}
               </ul>
+              <div className="d-flex justify-content-center">
+                Total: {total.toFixed(2)}
+              </div>
+              <ContinueButton variant="primary">Continuar</ContinueButton>
+            </ItemContainer>
+            <TextContainer>
               <div
                 className="d-flex flex-column align-items-center justify-content-center"
                 style={{ textAlign: 'center', marginBottom: '20px' }}
@@ -133,20 +166,6 @@ const ShoppingCart = () => {
                 />
                 <span>Média: Leafeel!</span>
               </div>
-              <ContinueButton variant="primary">Continuar</ContinueButton>
-            </ItemContainer>
-            <TextContainer>
-              <p>
-                DETAILS Description A prime example of exquisite Italian
-                craftmanship, the tailored cut of this double-breasted wool
-                blazer by Lemon W is complemented by classic notched lapels.
-                Spun from rich wool fibres, a slightly cropped silhouette - and
-                a triangle logo on the back put a twist on its traditional
-                allure. Made in: Italy Brand color: A7C7D9 LIGHT BLUE Highlights
-                black wool tailored design notched lapels double-breasted button
-                fastening long sleeves buttoned cuffs two front jetted pockets
-                straight hem cropped Brand style ID: UGM257SOOO11A6
-              </p>
             </TextContainer>
           </>
         )}

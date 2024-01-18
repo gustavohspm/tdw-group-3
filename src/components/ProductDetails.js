@@ -52,7 +52,7 @@ const ProductDetails = () => {
         color: selectedColor,
         colorHex: selectedColorHex,
         size: selectedSize,
-        sustainableData: product.sustainableData
+        sustainableData: product.sustainableData,
       });
     } else {
       alert('Selecione a cor e o tamanho antes de adicionar ao carrinho');
@@ -157,25 +157,37 @@ const ProductDetails = () => {
             </div>
             <button
               onClick={handleAddToCart}
-              className="btn-primary w-100 rounded-2 d-none d-sm-block add-to-cart-button"
+              className="btn btn-primary w-100 rounded-2 d-none d-sm-block add-to-cart-button"
+              style={{
+                color: '#000',
+                background: '#A7C7D9',
+                fontSize: '16px',
+                fontWeight: 'bold',
+                border: 'none',
+              }}
             >
-              Add to Cart
+              Adicionar ao carrinho
             </button>
-            <div className='mt-4 d-flex justify-content-center'>
-              <PieGraphics sustainableData={product.sustainableData} size={204} />
+            <div className="mt-4 d-flex justify-content-center">
+              <PieGraphics
+                sustainableData={product.sustainableData}
+                size={204}
+              />
             </div>
           </div>
         </div>
       </div>
-      <p className="py-5 px-4">
-        DETAILS Description A prime example of exquisite Italian craftmanship,
-        the tailored cut of this double-breasted wool blazer by Lemon W is
-        complemented by classic notched lapels. Spun from rich wool fibres, a
-        slightly cropped silhouette - and a triangle logo on the back put a
-        twist on its traditional allure. Made in: Italy Brand color: A7C7D9
-        LIGHT BLUE Highlights black wool tailored design notched lapels
-        double-breasted button fastening long sleeves buttoned cuffs two front
-        jetted pockets straight hem cropped Brand style ID: UGM257SOOO11A6
+      <p className="py-2 px-4">DETALHES</p>
+      <p className="py-2 px-4">
+        Um excelente exemplo do requintado artesanato italiano, o corte sob
+        medida deste blazer de lã trespassado da Lemon W é complementado por
+        lapelas clássicas com entalhes. Confeccionado em ricas fibras de lã, uma
+        silhueta ligeiramente recortada e um logotipo triangular nas costas dão
+        um toque diferente ao seu fascínio tradicional. Fabricado em: Itália Cor
+        da marca: A7C7D9 AZUL CLARO Destaques lã preta design sob medida lapelas
+        entalhadas fecho de botão trespassado mangas compridas punhos abotoados
+        dois bolsos frontais com jactos bainha reta cortada Estilo da marca ID:
+        UGM257SOOO11A6
       </p>
       <button
         onClick={handleAddToCart}
@@ -189,9 +201,14 @@ const ProductDetails = () => {
           zIndex: '1000',
           maxWidth: '95%',
           marginBottom: '16px',
+          color: '#000',
+          background: '#A7C7D9',
+          fontSize: '16px',
+          fontWeight: 'bold',
+          border: 'none',
         }}
       >
-        Add to Cart
+        Adicionar ao carrinho
       </button>
       <Footer />
     </div>
