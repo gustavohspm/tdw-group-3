@@ -86,8 +86,8 @@ const SearchContainer = styled.div`
 `;
 
 const SearchIcon = styled(FaSearch)`
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.4rem;
+  height: 1.4rem;
   cursor: pointer;
 `;
 
@@ -110,20 +110,20 @@ const SearchInput = styled.input`
 `;
 
 const IconSvg = styled.img`
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 1.5rem;
+  height: 1.5rem;
   cursor: pointer;
 `;
 
 const IconShopSvg = styled.img`
-  width: 1.6em;
-  height: 1.6em;
+  width: 1.4em;
+  height: 1.4em;
   cursor: pointer;
 `;
 
 const IconProfileSvg = styled.img`
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
 `;
 
@@ -161,18 +161,6 @@ const NavBar = () => {
         { name: language.menu.woman.item6, path: "/coats" },
       ],
     },
-
-    // {
-    //   name: language.menu.certifications.header,
-    //   disabled: false,
-    //   subcategories: [
-    //     { name: language.menu.certifications.item1, path: "/organic" },
-    //     { name: language.menu.certifications.item2, path: "/fairtrade" },
-    //     { name: language.menu.certifications.item3, path: "/resources" },
-    //     { name: language.menu.certifications.item3, path: "/work-conditions" },
-    //     { name: language.menu.certifications.item4, path: "/animal-welfare" },
-    //   ],
-    // },
     {
       name: language.menu.man.header,
       disabled: true,
@@ -183,16 +171,7 @@ const NavBar = () => {
     },
     {
       name: language.menu.brands.header,
-      disabled: false,
-      path: "/brands",
-      subcategories: [
-        { name: "AAAAAA", path: "/aaaaaa" },
-        { name: "BBBBBB", path: "/bbbbbb" },
-        { name: "CCCCCC", path: "/cccccc" },
-        { name: "DDDDDD", path: "/dddddd" },
-        { name: "EEEEEE", path: "/eeeeee" },
-        { name: "FFFFFF", path: "/ffffff" },
-      ],
+      disabled: true,
     },
   ];
 
@@ -238,7 +217,7 @@ const NavBar = () => {
 
   return (
     <Container>
-      <Link to="/">
+      <Link className={window.innerWidth > 810 ? "col-3" : ""} to="/">
         <Logo className="px-4" visible={!searchVisible}>
           <img src={blackLogo} style={{ width: "8rem" }} />
         </Logo>
@@ -263,7 +242,7 @@ const NavBar = () => {
         )}
       </div>
 
-      <NavElements isOpen={showNavbar} ref={navRef} className="">
+      <NavElements isOpen={showNavbar} ref={navRef} className={window.innerWidth > 810 ? "col-5" : ""}>
         <NavBarItems
           categories={categories}
           activeCategory={activeCategory}
@@ -278,7 +257,7 @@ const NavBar = () => {
           <LanguageButton />
         </NavLinkItem>
       </NavElements>
-      <div className="d-flex align-items-center justify-content-around">
+      <div className={window.innerWidth > 810 ? "col-3 d-flex align-items-center justify-content-end" : "d-flex align-items-center justify-content-around"}>
         {window.innerWidth > 810 && (
           <SearchContainer ref={searchRef} className="px-3">
             <SearchIcon onClick={toggleSearch} />
@@ -290,7 +269,7 @@ const NavBar = () => {
             />
           </SearchContainer>
         )}
-        <StyledLink to="#" className="px-3">
+        <StyledLink to="#" className={window.innerWidth > 810 ? "px-3" : ""}>
           <IconSvg src={ Star } />
         </StyledLink>
         <StyledLink

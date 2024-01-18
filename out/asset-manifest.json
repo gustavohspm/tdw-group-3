@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ede4aa5e.css",
+    "main.js": "/static/js/main.715e8f74.js",
+    "static/js/651.7f22e78a.chunk.js": "/static/js/651.7f22e78a.chunk.js",
+    "static/media/friendlist-regular.ttf": "/static/media/friendlist-regular.27fc083b5ef78a1a293c.ttf",
+    "static/media/leafeel_black.png": "/static/media/leafeel_black.471b9efd31e3708b6bbe.png",
+    "static/media/es.svg": "/static/media/es.36af038c044fdb72ff7a8b3c53a2cc06.svg",
+    "static/media/en.svg": "/static/media/en.4afe1f8078ab8f57c3739b9fa8a3423f.svg",
+    "index.html": "/index.html",
+    "static/media/shoppingcart.svg": "/static/media/shoppingcart.1ad818c1447568a1135c3fd97f5a0cee.svg",
+    "static/media/pt.svg": "/static/media/pt.af3d0a240c96ac4cbd15a20a814d4443.svg",
+    "static/media/user.svg": "/static/media/user.26f3a1e29295f949f1e642fd5202697b.svg",
+    "static/media/star.svg": "/static/media/star.2814869acdfccb117e6943908ec04748.svg",
+    "main.ede4aa5e.css.map": "/static/css/main.ede4aa5e.css.map",
+    "main.715e8f74.js.map": "/static/js/main.715e8f74.js.map",
+    "651.7f22e78a.chunk.js.map": "/static/js/651.7f22e78a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ede4aa5e.css",
+    "static/js/main.715e8f74.js"
+  ]
+}

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Hamburger = styled.div`
   display: inline-block;
   height: 29px;
-  margin-right: 32px;
+  margin-right: 16px;
   position: relative;
   width: 28px;
 `;

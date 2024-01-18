@@ -3,36 +3,37 @@ import Navbar from "../globalComponents/NavBar";
 import Carousel from "../globalComponents/Carousel";
 import "bootstrap/dist/css/bootstrap.css";
 import Cookies from "js-cookie";
-import { Modal, Button } from "react-bootstrap";
 import SplashScreen from "./SplashScreen";
-import Footer from '../globalComponents/Footer';
+import Footer from "../globalComponents/Footer";
+import firstImage1 from "../assets/carousel1.1.jpeg";
+import secondImage1 from "../assets/carousel1.2.jpeg";
+import firstImage2 from "../assets/carousel2.1.jpeg";
+import secondImage2 from "../assets/carousel.2.2.jpeg";
 
 const Home = () => {
-  const images = [
+  const imagesFirstCarousel = [
     {
-      url: "https://picsum.photos/200/300?random=1",
+      url: firstImage1,
       title: "Imagem 1",
       description: "Descrição da Imagem 1",
     },
     {
-      url: "https://picsum.photos/200/300?random=2",
+      url: secondImage1,
       title: "Imagem 2",
       description: "Descrição da Imagem 2",
     },
+  ];
+
+  const imagesSecondCarousel = [
     {
-      url: "https://picsum.photos/200/300?random=3",
-      title: "Imagem 3",
-      description: "Descrição da Imagem 3",
+      url: firstImage2,
+      title: "Imagem 1",
+      description: "Descrição da Imagem 1",
     },
     {
-      url: "https://picsum.photos/200/300?random=4",
-      title: "Imagem 4",
-      description: "Descrição da Imagem 4",
-    },
-    {
-      url: "https://picsum.photos/200/300?random=5",
-      title: "Imagem 5",
-      description: "Descrição da Imagem 5",
+      url: secondImage2,
+      title: "Imagem 2",
+      description: "Descrição da Imagem 2",
     },
   ];
 
@@ -47,7 +48,7 @@ const Home = () => {
   }, []);
 
   const handleCloseModal = () => {
-    Cookies.set("SeenSplashScreen", "true", { expires: 7 });
+    Cookies.set("SeenSplashScreen", "true", { expires: 30 });
     setShowSplashScreen(false);
   };
 
@@ -58,10 +59,10 @@ const Home = () => {
         <h1>Bem-vindo à página inicial!</h1>
         {showSplashScreen && <SplashScreen onClose={handleCloseModal} />}
         <div className="mb-4">
-          <Carousel images={images} autoPlay={true} />
+          <Carousel images={imagesFirstCarousel} autoPlay={true} />
         </div>
         <div className="mb-4">
-          <Carousel images={images} autoPlay={true} />
+          <Carousel images={imagesSecondCarousel} autoPlay={true} />
         </div>
       </div>
       <Footer />

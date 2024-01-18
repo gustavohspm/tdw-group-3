@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import "../App.css";
 import PieGraphics from "./PieGraphics";
+import { FaTimes } from "react-icons/fa";
 
 const ModalOverlay = styled.div`
   position: fixed;
@@ -23,7 +24,7 @@ const ModalContent = styled.div`
   background: #fff;
   padding: 32px;
   border-radius: 8px;
-  max-width: 70vw;
+  max-width: 60vw;
   width: 100%;
   text-align: center;
   position: relative;
@@ -40,6 +41,8 @@ const CloseButton = styled.button`
   position: absolute;
   top: 10px;
   right: 10px;
+  border: none;
+  background: none;
 `;
 
 const CardDetails = ({ id, title, image, price, brand, sustainableData }) => {
@@ -94,13 +97,15 @@ const CardDetails = ({ id, title, image, price, brand, sustainableData }) => {
 
         <ModalOverlay>
         <ModalContent>
-          <CloseButton onClick={onClose}>X</CloseButton>
+        <CloseButton onClick={onClose}> <FaTimes style={{fontSize: "xx-large"}}/></CloseButton>
           <div className="d-flex justify-content-center flex-column mb-1">
             {" "}
             <h5 className="text-center">
             {title} | {brand}
             </h5>{" "}
             <PieGraphics sustainableData={sustainableData} size={200} />
+
+            
           </div>
         </ModalContent>
         </ModalOverlay>

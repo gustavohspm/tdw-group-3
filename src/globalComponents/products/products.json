@@ -88,7 +88,35 @@
     "sizes": ["Único"],
     "colors": ["Marrom", "Caramelo"],
     "brand": "Nalu",
-    "category": "feminino"
+    "category": "feminino",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [],
+      "resources": [
+        "blue",
+        "sfa",
+        {
+          "colorSection": "#61BEAD"
+        }
+      ],
+      "animalwelfare": [
+        "rws",
+        {
+          "colorSection": "#628FC5"
+        }
+      ],
+      "workconditions": [
+        "fwf",
+        {
+          "colorSection": "#B39AC7"
+        }
+      ]
+    }
   },
   {
     "id": 4,
@@ -98,7 +126,26 @@
     "sizes": ["S", "M", "L"],
     "colors": ["Rosa", "Branco"],
     "brand": "CasualWear",
-    "category": "feminino"
+    "category": "feminino",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [],
+      "resources": [],
+      "animalwelfare": [
+        "rws",
+        "rds",
+        {
+          "colorSection": "#628FC5"
+        }
+      ],
+      "workconditions": []
+    }
   },
   {
     "id": 5,
@@ -108,7 +155,15 @@
     "sizes": ["35", "36", "37", "38"],
     "colors": ["Preto", "Branco"],
     "brand": "SummerFootwear",
-    "category": "feminino"
+    "category": "feminino",
+    "sustainableData": {
+      "workconditions": [
+        "fwf",
+        {
+          "colorSection": "#B39AC7"
+        }
+      ]
+    }
   },
   {
     "id": 6,
@@ -118,7 +173,28 @@
     "sizes": ["36", "38", "40"],
     "colors": ["Cinza"],
     "brand": "DenimStyle",
-    "category": "feminino"
+    "category": "feminino",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "resources": [
+        "blue",
+        {
+          "colorSection": "#61BEAD"
+        }
+      ],
+      "animalwelfare": [
+        "rws",
+        {
+          "colorSection": "#628FC5"
+        }
+      ]
+    }
   },
   {
     "id": 7,
@@ -128,7 +204,36 @@
     "sizes": ["S", "M", "L"],
     "colors": ["Branca"],
     "brand": "JewelCraft",
-    "category": "feminino"
+    "category": "feminino",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [
+        "ftts",
+        "wrap",
+        {
+          "colorSection": "#EDD57F"
+        }
+      ],
+      "animalwelfare": [
+        "rws",
+        "rds",
+        {
+          "colorSection": "#628FC5"
+        }
+      ],
+      "workconditions": [
+        "fwf",
+        {
+          "colorSection": "#B39AC7"
+        }
+      ]
+    }
   },
   {
     "id": 8,
@@ -138,7 +243,29 @@
     "sizes": ["S", "M", "L"],
     "colors": ["Cinza", "Preto"],
     "brand": "ElegantFashion",
-    "category": "feminino"
+    "category": "feminino",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [
+        "ftts",
+        "wrap",
+        {
+          "colorSection": "#EDD57F"
+        }
+      ],
+      "resources": [
+        "blue",
+        {
+          "colorSection": "#61BEAD"
+        }
+      ]
+    }
   },
   {
     "id": 9,
@@ -148,7 +275,33 @@
     "sizes": ["Único"],
     "colors": ["Branco"],
     "brand": "UrbanExplorer",
-    "category": "feminino"
+    "category": "feminino",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [
+        "ftts",
+        {
+          "colorSection": "#EDD57F"
+        }
+      ],
+      "animalwelfare": [
+        "rds",
+        {
+          "colorSection": "#628FC5"
+        }
+      ],
+      "workconditions": [
+        "fwf",
+        {
+          "colorSection": "#B39AC7"
+        }
+      ]
+    }
   },
   {
     "id": 10,
@@ -158,6 +311,28 @@
     "sizes": ["S", "M", "L"],
     "colors": ["Flora"],
     "brand": "GlamourDress",
-    "category": "feminino"
+    "category": "feminino",
+    "sustainableData": {
+      "organic": [
+        "gots",
+        "ocs",
+        {
+          "colorSection": "#EEAD6D"
+        }
+      ],
+      "fairtrade": [
+        "ftts",
+        "wrap",
+        {
+          "colorSection": "#EDD57F"
+        }
+      ],
+      "workconditions": [
+        "fwf",
+        {
+          "colorSection": "#B39AC7"
+        }
+      ]
+    }
   }
 ]

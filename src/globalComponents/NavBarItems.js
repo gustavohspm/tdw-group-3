@@ -174,8 +174,8 @@ const ChevronLeft = styled.span`
 `;
 
 const IconSvg = styled.img`
-  width: 2rem;
-  height: 2rem;
+  width: 1.2rem;
+  height: 1.2rem;
   cursor: pointer;
 `;
 
