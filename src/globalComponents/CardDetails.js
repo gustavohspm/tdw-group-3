@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import '../App.css';
-import Footer from '../globalComponents/Footer';
 
 const CardDetails = ({ id, title, image, price, brand }) => {
   const [favorited, setFavorited] = useState(false);
@@ -37,7 +36,6 @@ const CardDetails = ({ id, title, image, price, brand }) => {
           &#9733;
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CardDetails from './CardDetails';
-import Footer from '../globalComponents/Footer';
 
 const ClothCard = ({ products }) => {
   return (
@@ -17,7 +16,6 @@ const ClothCard = ({ products }) => {
           />
         </div>
       ))}
-      <Footer />
     </div>
   );
 };
