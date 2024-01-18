@@ -358,7 +358,7 @@ const NavBarItems = ({
       )}
       {isMobile && (
         <div>
-          <NoHasSubCategory to="#" className="d-flex align-items-center">
+          <NoHasSubCategory to="/profile" className="d-flex align-items-center">
             <IconSvg src={Profile} />
             <span className="ms-2 text-uppercase">
               {language.globalTexts.myAccount}
