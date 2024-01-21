@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import productsData from '../globalComponents/products/products.json';
-import Navbar from '../globalComponents/NavBar';
-import '../App.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import { useShoppingCart } from '../globalComponents/ShoppingCartContext';
-import Footer from '../globalComponents/Footer';
-import PieGraphics from '../globalComponents/PieGraphics';
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+import productsData from "../globalComponents/products/products.json";
+import Navbar from "../globalComponents/NavBar";
+import "../App.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import { useShoppingCart } from "../globalComponents/ShoppingCartContext";
+import Footer from "../globalComponents/Footer";
+import PieGraphics from "../globalComponents/PieGraphics";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -19,18 +19,15 @@ const ProductDetails = () => {
     return <div>Produto não encontrado.</div>;
   }
 
-  // Estado para controlar a cor e o tamanho selecionados
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedColorHex, setSelectedColorHex] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
 
-  // Mapear informações do JSON para obter o nome hexadecimal de cada cor
   const colorMap = product.colors.reduce((acc, colorObj) => {
     acc[colorObj.name] = colorObj.hex;
     return acc;
   }, {});
 
-  // Funções para atualizar o estado quando uma cor ou tamanho for selecionado
   const handleColorClick = (color) => {
     setSelectedColor(color === selectedColor ? null : color);
     setSelectedColorHex(colorMap[color]);
@@ -40,9 +37,7 @@ const ProductDetails = () => {
     setSelectedSize(size === selectedSize ? null : size);
   };
 
-  // Função para adicionar o produto ao carrinho
   const handleAddToCart = () => {
-    // Verifica se cor e tamanho estão selecionados antes de adicionar ao carrinho
     if (selectedColor && selectedSize) {
       addItem({
         id: product.id,
@@ -55,7 +50,7 @@ const ProductDetails = () => {
         sustainableData: product.sustainableData,
       });
     } else {
-      alert('Selecione a cor e o tamanho antes de adicionar ao carrinho');
+      alert("Selecione a cor e o tamanho antes de adicionar ao carrinho");
     }
   };
 
@@ -80,22 +75,21 @@ const ProductDetails = () => {
                 <i
                   className="bi bi-star p-2"
                   size="2x"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                 ></i>
                 <i
                   className="bi bi-share p-2"
                   size="2x"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                 ></i>
               </div>
             </div>
             <h2
               className="p-2"
-              style={{ borderTop: '1px solid #E3D3B2', marginBottom: '32px' }}
+              style={{ borderTop: "1px solid #E3D3B2", marginBottom: "32px" }}
             >
               € {product.price}
             </h2>
-            {/* Opções de cores */}
             <div className="d-flex flex-column">
               <p className="mb-1">Cor: {selectedColor}</p>
               <div className="d-flex flex-wrap">
@@ -103,22 +97,22 @@ const ProductDetails = () => {
                   <button
                     key={color.name}
                     className={`color-option ${
-                      selectedColor === color.name ? 'selected' : ''
+                      selectedColor === color.name ? "selected" : ""
                     }`}
                     style={{
                       backgroundColor: color.hex,
-                      width: '40px',
-                      height: '40px',
-                      marginRight: '8px',
-                      marginBottom: '8px',
-                      border: '1px solid #ddd',
-                      borderRadius: '4px',
-                      padding: '4px',
+                      width: "40px",
+                      height: "40px",
+                      marginRight: "8px",
+                      marginBottom: "8px",
+                      border: "1px solid #ddd",
+                      borderRadius: "4px",
+                      padding: "4px",
                     }}
                     onClick={() => handleColorClick(color.name)}
                   >
                     {selectedColor === color.hex && (
-                      <span style={{ marginLeft: '4px', border: 'blue' }}>
+                      <span style={{ marginLeft: "4px", border: "blue" }}>
                         {color.hex}
                       </span>
                     )}
@@ -127,7 +121,6 @@ const ProductDetails = () => {
               </div>
             </div>
 
-            {/* Opções de tamanhos */}
             <div className="mt-2">
               <p>Tamanho:</p>
               <div className="d-flex">
@@ -135,18 +128,18 @@ const ProductDetails = () => {
                   <button
                     key={size}
                     className={`btn btn-outline-primary size-button mb-4 ${
-                      selectedSize === size ? 'selected' : ''
+                      selectedSize === size ? "selected" : ""
                     }`}
                     style={{
                       border: `1px solid ${
-                        selectedSize === size ? '#E3D3B2' : 'black'
+                        selectedSize === size ? "#E3D3B2" : "black"
                       }`,
-                      color: `${selectedSize === size ? 'black' : ''}`,
+                      color: `${selectedSize === size ? "black" : ""}`,
                       backgroundColor: `${
-                        selectedSize === size ? '#E3D3B2' : ''
+                        selectedSize === size ? "#E3D3B2" : ""
                       }`,
                       marginRight:
-                        index < product.sizes.length - 1 ? '8px' : '0',
+                        index < product.sizes.length - 1 ? "8px" : "0",
                     }}
                     onClick={() => handleSizeClick(size)}
                   >
@@ -159,11 +152,11 @@ const ProductDetails = () => {
               onClick={handleAddToCart}
               className="btn btn-primary w-100 rounded-2 d-none d-sm-block add-to-cart-button"
               style={{
-                color: '#000',
-                background: '#A7C7D9',
-                fontSize: '16px',
-                fontWeight: 'bold',
-                border: 'none',
+                color: "#000",
+                background: "#A7C7D9",
+                fontSize: "16px",
+                fontWeight: "bold",
+                border: "none",
               }}
             >
               Adicionar ao carrinho
@@ -193,19 +186,19 @@ const ProductDetails = () => {
         onClick={handleAddToCart}
         className="btn btn-primary w-100 mt-3 d-sm-none add-to-cart-button"
         style={{
-          position: 'fixed',
-          bottom: '0',
-          left: '0',
-          right: '0',
-          margin: 'auto',
-          zIndex: '1000',
-          maxWidth: '95%',
-          marginBottom: '16px',
-          color: '#000',
-          background: '#A7C7D9',
-          fontSize: '16px',
-          fontWeight: 'bold',
-          border: 'none',
+          position: "fixed",
+          bottom: "0",
+          left: "0",
+          right: "0",
+          margin: "auto",
+          zIndex: "1000",
+          maxWidth: "95%",
+          marginBottom: "16px",
+          color: "#000",
+          background: "#A7C7D9",
+          fontSize: "16px",
+          fontWeight: "bold",
+          border: "none",
         }}
       >
         Adicionar ao carrinho

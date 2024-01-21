@@ -1,14 +1,11 @@
-import React from 'react';
-import { useShoppingCart } from '../globalComponents/ShoppingCartContext';
-import Navbar from '../globalComponents/NavBar';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { FaTrash } from 'react-icons/fa';
-import { Button } from 'react-bootstrap';
-import styled from 'styled-components';
-import PieGraphics from '../globalComponents/PieGraphics';
-import AveragePieGraphics from '../globalComponents/AveragePieGraphics';
-import chart from '../chart.png';
+import React from "react";
+import { useShoppingCart } from "../globalComponents/ShoppingCartContext";
+import Navbar from "../globalComponents/NavBar";
+import { FaTrash } from "react-icons/fa";
+import { Button } from "react-bootstrap";
+import styled from "styled-components";
+import PieGraphics from "../globalComponents/PieGraphics";
+import chart from "../chart.png";
 
 const CartContainer = styled.div`
   display: flex;
@@ -60,7 +57,7 @@ const ContinueButton = styled(Button)`
     color: #000;
     border: none;
     font-weight: bold;
-    margin-botton: 'inherit';
+    margin-botton: "inherit";
   }
 `;
 
@@ -102,8 +99,8 @@ const ShoppingCart = () => {
                       <li
                         className="d-flex justify-content-between mb-4"
                         style={{
-                          listStyle: 'none',
-                          borderBottom: '1px solid #E3D3B2',
+                          listStyle: "none",
+                          borderBottom: "1px solid #E3D3B2",
                         }}
                         key={item.id}
                       >
@@ -111,9 +108,8 @@ const ShoppingCart = () => {
                           <img
                             src={item.image}
                             alt={item.title}
-                            style={{ width: '50px' }}
+                            style={{ width: "50px" }}
                           />
-                          {/* {item.title} -  */}
                           {item.color}, {item.size} - €{item.price}
                         </div>
                         <div className="d-flex flex-column align-items-center justify-content-start">
@@ -157,12 +153,12 @@ const ShoppingCart = () => {
             <TextContainer>
               <div
                 className="d-flex flex-column align-items-center justify-content-center"
-                style={{ textAlign: 'center', marginBottom: '20px' }}
+                style={{ textAlign: "center", marginBottom: "20px" }}
               >
                 <img
                   src={chart}
                   alt="Sustainable Clothing Certifications Chart"
-                  style={{ maxWidth: '50%', height: 'auto' }}
+                  style={{ maxWidth: "50%", height: "auto" }}
                 />
                 <span>Média: Leafeel!</span>
               </div>

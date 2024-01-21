@@ -1,29 +1,29 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import NavBar from '../globalComponents/NavBar';
-import Footer from '../globalComponents/Footer';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import NavBar from "../globalComponents/NavBar";
+import Footer from "../globalComponents/Footer";
 
 const Checkout = () => {
-  const [promoCode, setPromoCode] = useState('');
+  const [promoCode, setPromoCode] = useState("");
   const [isPromoCodeVisible, setIsPromoCodeVisible] = useState(false);
   const [promoCodeApplied, setPromoCodeApplied] = useState(false);
 
   const handleApplyPromoCode = () => {
-    if (promoCode === 'leafeel') {
+    if (promoCode === "leafeel") {
       setPromoCodeApplied(true);
     } else {
       setPromoCodeApplied(false);
     }
-    setPromoCode('');
+    setPromoCode("");
   };
 
   const togglePromoCode = () => {
     setIsPromoCodeVisible(!isPromoCodeVisible);
   };
 
-  const subtotal = '€ 579,97'; 
-  const delivery = '€ 0'; 
-  const total = '€ 579,97'; 
+  const subtotal = "€ 579,97";
+  const delivery = "€ 0";
+  const total = "€ 579,97";
 
   return (
     <div>
@@ -57,9 +57,15 @@ const Checkout = () => {
 
         <div className="checkout-summary">
           <h4>Summary</h4>
-          <p><b>Subtotal (3):</b> {subtotal}</p>
-          <p><b>Delivery:</b> {delivery}</p>
-          <p><b>Total:</b> {total}</p>
+          <p>
+            <b>Subtotal (3):</b> {subtotal}
+          </p>
+          <p>
+            <b>Delivery:</b> {delivery}
+          </p>
+          <p>
+            <b>Total:</b> {total}
+          </p>
         </div>
       </div>
       <Footer />

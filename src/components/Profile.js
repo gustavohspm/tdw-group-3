@@ -5,7 +5,7 @@ import "./Profile.css";
 import NavBar from "../globalComponents/NavBar";
 import Footer from "../globalComponents/Footer";
 import renata from "../renata.jpg";
-import LanguageButton from '../globalComponents/LanguageButton';
+import LanguageButton from "../globalComponents/LanguageButton";
 
 const Profile = () => {
   const [language, setLanguage] = useState("en-GB");

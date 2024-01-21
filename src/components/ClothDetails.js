@@ -1,9 +1,9 @@
-import React from 'react';
-import Navbar from '../globalComponents/NavBar';
-import 'bootstrap/dist/css/bootstrap.css';
-import ClothCard from '../globalComponents/ClothCard';
-import productsData from '../globalComponents/products/products.json';
-import Footer from '../globalComponents/Footer';
+import React from "react";
+import Navbar from "../globalComponents/NavBar";
+import "bootstrap/dist/css/bootstrap.css";
+import ClothCard from "../globalComponents/ClothCard";
+import productsData from "../globalComponents/products/products.json";
+import Footer from "../globalComponents/Footer";
 
 const ClothDetails = () => {
   return (

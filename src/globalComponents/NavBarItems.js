@@ -24,7 +24,7 @@ const Category = styled.div`
         transform: unset;
       }
     `}
-    
+
   &:hover {
     color: var(--grey-palette-color-text);
   }
@@ -378,9 +378,9 @@ NavBarItems.propTypes = {
         PropTypes.shape({
           name: PropTypes.string.isRequired,
           path: PropTypes.string,
-        })
+        }),
       ),
-    })
+    }),
   ).isRequired,
   activeCategory: PropTypes.number,
   setActiveCategory: PropTypes.func,

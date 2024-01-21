@@ -66,7 +66,7 @@ const Dot = styled.span`
 const ChevronRight = styled.span`
   transition: opacity 0.3s ease-in-out;
   cursor: pointer;
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.3);
 `;
@@ -74,7 +74,7 @@ const ChevronRight = styled.span`
 const ChevronLeft = styled.span`
   transition: opacity 0.3s ease-in-out;
   cursor: pointer;
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.3);
 `;
@@ -174,7 +174,7 @@ Carousel.propTypes = {
       url: PropTypes.string.isRequired,
       title: PropTypes.string,
       description: PropTypes.string,
-    })
+    }),
   ).isRequired,
   autoPlay: PropTypes.bool,
 };

@@ -1,108 +1,107 @@
 body {
-    font-family: 'Century Gothic', sans-serif;
+  font-family: "Century Gothic", sans-serif;
 }
 
 .user-profile {
-    margin-top: 100px;
-    background-color: #ffffff;
-    color: #333333;
-    padding: 20px;
-    text-align: left;
-    max-width: 100%;
-  }
-  
-  .user-profile h1 {
-    margin-bottom: 50px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .user-profile ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .user-profile li {
-    margin-bottom: 8px; 
-  }
-  
-  .user-profile a {
-    text-decoration: none;
-    color: inherit;
-    transition: font-weight 0.2s;
-  }
-  
-  .user-profile a:hover {
-    font-weight: bold;
-  }
+  margin-top: 100px;
+  background-color: #ffffff;
+  color: #333333;
+  padding: 20px;
+  text-align: left;
+  max-width: 100%;
+}
+
+.user-profile h1 {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.user-profile ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-profile li {
+  margin-bottom: 8px;
+}
+
+.user-profile a {
+  text-decoration: none;
+  color: inherit;
+  transition: font-weight 0.2s;
+}
+
+.user-profile a:hover {
+  font-weight: bold;
+}
 
 .select-container {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-  }
-  
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
 .select-container label {
-    display: flex;
-    align-items: center; 
-  }
+  display: flex;
+  align-items: center;
+}
 
-  .select-container select {
-    width: 50%;
-  }
+.select-container select {
+  width: 50%;
+}
 
-  .shop-preferences-section {
-    margin-top: 50px;
-  }
+.shop-preferences-section {
+  margin-top: 50px;
+}
 
-  .my-settings-section {
-    padding: 20px;
-  }
-  
-  .my-settings-section a {
-    text-decoration: none;
-    color: inherit;
-    transition: font-weight 0.2s;
-  }
-  
-  .my-settings-section a:hover {
-    font-weight: bold;
-  }
+.my-settings-section {
+  padding: 20px;
+}
 
-  .renata {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 75px;
-    margin-right: 10px;
-    object-fit: cover;
-  }
+.my-settings-section a {
+  text-decoration: none;
+  color: inherit;
+  transition: font-weight 0.2s;
+}
 
-  .support-section {
-    padding: 20px;
-  }
-  
-  .support-section h2 {
-    margin-bottom: 10px;
-  }
-  
-  .support-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .support-section li {
-    margin-bottom: 8px;
-  }
-  
-  .support-section a {
-    text-decoration: none;
-    color: inherit;
-    transition: font-weight 0.2s;
-  }
-  
-  .support-section a:hover {
-    font-weight: bold;
-  }
-  
+.my-settings-section a:hover {
+  font-weight: bold;
+}
+
+.renata {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 75px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.support-section {
+  padding: 20px;
+}
+
+.support-section h2 {
+  margin-bottom: 10px;
+}
+
+.support-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.support-section li {
+  margin-bottom: 8px;
+}
+
+.support-section a {
+  text-decoration: none;
+  color: inherit;
+  transition: font-weight 0.2s;
+}
+
+.support-section a:hover {
+  font-weight: bold;
+}

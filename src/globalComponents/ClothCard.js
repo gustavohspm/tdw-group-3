@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import CardDetails from './CardDetails';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import CardDetails from "./CardDetails";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const ClothCard = ({ products }) => {
   return (

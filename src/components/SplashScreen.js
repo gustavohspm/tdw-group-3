@@ -37,10 +37,8 @@ const ModalContent = styled.div`
   padding: 8px 0 24px 0;
   border-radius: 8px;
   max-width: 70vw;
-  //width: 100%;
   text-align: center;
   position: relative;
-  //max-height: 80vh;
   overflow-y: auto;
   display: flex;
   align-items: center;
@@ -63,7 +61,7 @@ const CloseButton = styled.button`
 `;
 
 const SplashScreen = ({ onClose }) => {
-  const [languageKey, setLanguageKey] = useState('pt');
+  const [languageKey, setLanguageKey] = useState("pt");
   const [language, setLanguage] = useState(pt);
   const languages = { pt, es, en };
 
@@ -99,9 +97,15 @@ const SplashScreen = ({ onClose }) => {
   return (
     <ModalOverlay>
       <ModalContent>
-        <CloseButton onClick={onClose}> <FaTimes style={{fontSize: "xx-large"}}/></CloseButton>
+        <CloseButton onClick={onClose}>
+          {" "}
+          <FaTimes style={{ fontSize: "xx-large" }} />
+        </CloseButton>
         <div className="d-flex justify-content-center flex-column mb-1">
-          <span className="logo-font-text text-center" style={{ fontSize: "32px" }}>
+          <span
+            className="logo-font-text text-center"
+            style={{ fontSize: "32px" }}
+          >
             Leafeel
           </span>
         </div>

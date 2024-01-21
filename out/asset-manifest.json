@@ -1,10 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.ede4aa5e.css",
-    "main.js": "/static/js/main.715e8f74.js",
+    "main.css": "/static/css/main.b7c124ef.css",
+    "main.js": "/static/js/main.9028dd33.js",
     "static/js/651.7f22e78a.chunk.js": "/static/js/651.7f22e78a.chunk.js",
+    "static/media/secondInfoEN.jpeg": "/static/media/secondInfoEN.2964ed9f19dab5e0fe16.jpeg",
+    "static/media/secondInfoES.jpeg": "/static/media/secondInfoES.2964ed9f19dab5e0fe16.jpeg",
+    "static/media/firstInfoES.jpeg": "/static/media/firstInfoES.55daa26b5bfaf53a9d0c.jpeg",
+    "static/media/firstInfoPT.jpeg": "/static/media/firstInfoPT.acf78c2693dca109d25a.jpeg",
+    "static/media/firstInfoEN.jpeg": "/static/media/firstInfoEN.27991b07e79ed6e89419.jpeg",
+    "static/media/secondInfoPT.jpeg": "/static/media/secondInfoPT.ac28b7adbc9a0dd0c72d.jpeg",
+    "static/media/carousel1.2.jpeg": "/static/media/carousel1.2.fb54f5d44bbd60f3a863.jpeg",
+    "static/media/carousel2.1.jpeg": "/static/media/carousel2.1.52f6983a81df7c9a2f4a.jpeg",
+    "static/media/thirdInfoES.jpeg": "/static/media/thirdInfoES.6e64e74d6ba40ef20755.jpeg",
+    "static/media/carousel1.1.jpeg": "/static/media/carousel1.1.c90bf7e95dec829436d0.jpeg",
+    "static/media/thirdInfoPT.jpeg": "/static/media/thirdInfoPT.02ba1f00d22cefe2bb16.jpeg",
+    "static/media/thirdInfoEN.jpeg": "/static/media/thirdInfoEN.e7be098a5dd9c4da62a8.jpeg",
     "static/media/friendlist-regular.ttf": "/static/media/friendlist-regular.27fc083b5ef78a1a293c.ttf",
+    "static/media/carousel.2.2.jpeg": "/static/media/carousel.2.2.259e9a53489ad525ad23.jpeg",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/leafeel_logo_black.png": "/static/media/leafeel_logo_black.fe09752af813222c2479.png",
     "static/media/leafeel_black.png": "/static/media/leafeel_black.471b9efd31e3708b6bbe.png",
+    "static/media/chart.png": "/static/media/chart.aaf7faad9a86db697202.png",
+    "static/media/renata.jpg": "/static/media/renata.0b166c904a0a27663185.jpg",
     "static/media/es.svg": "/static/media/es.36af038c044fdb72ff7a8b3c53a2cc06.svg",
     "static/media/en.svg": "/static/media/en.4afe1f8078ab8f57c3739b9fa8a3423f.svg",
     "index.html": "/index.html",
@@ -12,12 +30,9 @@
     "static/media/pt.svg": "/static/media/pt.af3d0a240c96ac4cbd15a20a814d4443.svg",
     "static/media/user.svg": "/static/media/user.26f3a1e29295f949f1e642fd5202697b.svg",
     "static/media/star.svg": "/static/media/star.2814869acdfccb117e6943908ec04748.svg",
-    "main.ede4aa5e.css.map": "/static/css/main.ede4aa5e.css.map",
-    "main.715e8f74.js.map": "/static/js/main.715e8f74.js.map",
+    "main.b7c124ef.css.map": "/static/css/main.b7c124ef.css.map",
+    "main.9028dd33.js.map": "/static/js/main.9028dd33.js.map",
     "651.7f22e78a.chunk.js.map": "/static/js/651.7f22e78a.chunk.js.map"
   },
-  "entrypoints": [
-    "static/css/main.ede4aa5e.css",
-    "static/js/main.715e8f74.js"
-  ]
+  "entrypoints": ["static/css/main.b7c124ef.css", "static/js/main.9028dd33.js"]
 }

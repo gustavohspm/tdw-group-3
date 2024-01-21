@@ -1,20 +1,18 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import Home from './components/Home';
-import ClothDetails from './components/ClothDetails';
-import ProductDetails from './components/ProductDetails';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import FAQs from './components/FAQs';
-import ShoppingCart from './components/ShoppingCart';
-import { ShoppingCartProvider } from './globalComponents/ShoppingCartContext';
-import Profile from './components/Profile';
-import About from './components/About';
-import Checkout from './components/Checkout';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
+import Home from "./components/Home";
+import ClothDetails from "./components/ClothDetails";
+import ProductDetails from "./components/ProductDetails";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import FAQs from "./components/FAQs";
+import ShoppingCart from "./components/ShoppingCart";
+import Profile from "./components/Profile";
+import About from "./components/About";
+import Checkout from "./components/Checkout";
 
 export default function App() {
   return (
     <Router>
-      {/* <ShoppingCartProvider> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/woman" element={<ClothDetails />} />
@@ -26,7 +24,6 @@ export default function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Checkout" element={<Checkout />} />
       </Routes>
-      {/* </ShoppingCartProvider> */}
     </Router>
   );
 }

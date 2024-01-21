@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from '../globalComponents/NavBar';
-import Carousel from '../globalComponents/Carousel';
-import 'bootstrap/dist/css/bootstrap.css';
-import Cookies from 'js-cookie';
-import SplashScreen from './SplashScreen';
-import Footer from '../globalComponents/Footer';
-import firstImage1 from '../assets/carousel1.1.jpeg';
-import secondImage1 from '../assets/carousel1.2.jpeg';
-import firstImage2 from '../assets/carousel2.1.jpeg';
-import secondImage2 from '../assets/carousel.2.2.jpeg';
+import React, { useState, useEffect } from "react";
+import Navbar from "../globalComponents/NavBar";
+import Carousel from "../globalComponents/Carousel";
+import "bootstrap/dist/css/bootstrap.css";
+import Cookies from "js-cookie";
+import SplashScreen from "./SplashScreen";
+import Footer from "../globalComponents/Footer";
+import firstImage1 from "../assets/carousel1.1.jpeg";
+import secondImage1 from "../assets/carousel1.2.jpeg";
+import firstImage2 from "../assets/carousel2.1.jpeg";
+import secondImage2 from "../assets/carousel.2.2.jpeg";
 
 const Home = () => {
   const imagesFirstCarousel = [
@@ -32,7 +32,7 @@ const Home = () => {
   const [showSplashScreen, setShowSplashScreen] = useState(true);
 
   useEffect(() => {
-    const seenSplashScreen = Cookies.get('SeenSplashScreen');
+    const seenSplashScreen = Cookies.get("SeenSplashScreen");
 
     if (seenSplashScreen) {
       setShowSplashScreen(false);
@@ -40,7 +40,7 @@ const Home = () => {
   }, []);
 
   const handleCloseModal = () => {
-    Cookies.set('SeenSplashScreen', 'true', { expires: 30 });
+    Cookies.set("SeenSplashScreen", "true", { expires: 30 });
     setShowSplashScreen(false);
   };
 

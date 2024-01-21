@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const Hamburger = styled.div`
   display: inline-block;
@@ -19,7 +19,7 @@ const MainNavToggle = styled.a`
 
   &:after,
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     height: 4px;
@@ -96,7 +96,7 @@ const MenuHamburguerButton = ({ isMenuOpen, toggleMenu }) => {
     <Hamburger>
       <MainNavToggle
         href="#main-nav"
-        className={isMenuOpen ? 'active-menu' : ''}
+        className={isMenuOpen ? "active-menu" : ""}
         onClick={toggleMenu}
         isMenuOpen={isMenuOpen}
       >

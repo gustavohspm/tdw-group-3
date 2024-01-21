@@ -5,7 +5,7 @@ import pt from "./languages/pt.json";
 import enFlag from "../assets/en.svg";
 import esFlag from "../assets/es.svg";
 import ptFlag from "../assets/pt.svg";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const LanguageContext = createContext();
 
@@ -23,18 +23,18 @@ const LanguageProvider = ({ children }) => {
 
   const languages = ["en", "es", "pt"];
   const flags = [enFlag, esFlag, ptFlag];
-  const alts = ['English Flag', 'Spanish Flag', 'Portuguese Flag'];
+  const alts = ["English Flag", "Spanish Flag", "Portuguese Flag"];
 
   const getLanguageObject = (lang) => {
     switch (lang) {
       case "en":
-        return { ...en, flag: enFlag, alt: 'English' };
+        return { ...en, flag: enFlag, alt: "English" };
       case "es":
-        return { ...es, flag: esFlag, alt: 'Español' };
+        return { ...es, flag: esFlag, alt: "Español" };
       case "pt":
-        return { ...pt, flag: ptFlag, alt: 'Português' };
+        return { ...pt, flag: ptFlag, alt: "Português" };
       default:
-        return { ...en, flag: enFlag, alt: 'English' };
+        return { ...en, flag: enFlag, alt: "English" };
     }
   };
 
@@ -69,6 +69,6 @@ LanguageProvider.propTypes = {
 
 LanguageProvider.defaultProps = {
   children: null,
-};  
+};
 
 export default LanguageProvider;

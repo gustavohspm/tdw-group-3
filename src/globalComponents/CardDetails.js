@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
-import { Link } from 'react-router-dom';
-import '../App.css';
-import PieGraphics from './PieGraphics';
-import { FaTimes } from 'react-icons/fa';
+import { Link } from "react-router-dom";
+import "../App.css";
+import PieGraphics from "./PieGraphics";
+import { FaTimes } from "react-icons/fa";
 
 const ModalOverlay = styled.div`
   position: fixed;
@@ -64,7 +64,7 @@ const CardDetails = ({ id, title, image, price, brand, sustainableData }) => {
   return (
     <div
       className="card card-hover mb-4 rounded-0 border-0 custom-card"
-      style={{ maxWidth: '300px', height: '350px' }}
+      style={{ maxWidth: "300px", height: "350px" }}
     >
       <LinkContainer
         to={`/product/${id}`}
@@ -96,7 +96,7 @@ const CardDetails = ({ id, title, image, price, brand, sustainableData }) => {
       </div>
       <div className="card-body">
         <div
-          className={`favorite-star ${favorited ? 'favorited' : ''}`}
+          className={`favorite-star ${favorited ? "favorited" : ""}`}
           onClick={handleToggleFavorite}
         >
           <i className="bi bi-star" />
@@ -106,14 +106,14 @@ const CardDetails = ({ id, title, image, price, brand, sustainableData }) => {
         <ModalOverlay>
           <ModalContent>
             <CloseButton onClick={onClose}>
-              {' '}
-              <FaTimes style={{ fontSize: 'xx-large' }} />
+              {" "}
+              <FaTimes style={{ fontSize: "xx-large" }} />
             </CloseButton>
             <div className="d-flex justify-content-center flex-column mb-1">
-              {' '}
+              {" "}
               <h5 className="text-center">
                 {title} | {brand}
-              </h5>{' '}
+              </h5>{" "}
               <PieGraphics sustainableData={sustainableData} size={200} />
             </div>
           </ModalContent>

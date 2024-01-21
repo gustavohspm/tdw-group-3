@@ -59,34 +59,34 @@ function Pie({ data, colors, size }) {
   let sum = data.reduce((carry, current) => carry + current, 0);
   let segments = data.length;
   let startAngle = 0;
-  let normalizedData = data.map(value => (value / sum) * 100);
- 
+  let normalizedData = data.map((value) => (value / sum) * 100);
+
   return normalizedData.map((slice, sliceIndex) => {
-   const angle = (slice / 100) * 360;
-   const sliceColor = colors[sliceIndex % colors.length];
-   const { x1, y1, x2, y2 } = getAnglePoint(
-     startAngle,
-     startAngle + angle,
-     100,
-     100,
-     100
-   );
-   startAngle += angle;
- 
-   return (
-     <Slice
-       key={sliceIndex}
-       x1={x1}
-       y1={y1}
-       x2={x2}
-       y2={y2}
-       color={sliceColor}
-       delay={sliceIndex * 0.1}
-       animate={size >= 200}
-     />
-   );
+    const angle = (slice / 100) * 360;
+    const sliceColor = colors[sliceIndex % colors.length];
+    const { x1, y1, x2, y2 } = getAnglePoint(
+      startAngle,
+      startAngle + angle,
+      100,
+      100,
+      100,
+    );
+    startAngle += angle;
+
+    return (
+      <Slice
+        key={sliceIndex}
+        x1={x1}
+        y1={y1}
+        x2={x2}
+        y2={y2}
+        color={sliceColor}
+        delay={sliceIndex * 0.1}
+        animate={size >= 200}
+      />
+    );
   });
- }
+}
 
 function getSustainabilityConcept(score) {
   console.log(score);
@@ -131,7 +131,7 @@ export function PieGraphics({ sustainableData, size }) {
   const [score, setScore] = useState(0);
 
   const StyledDiv = styled.div`
-    background-color: ${(props) => props.color || 'transparent'};
+    background-color: ${(props) => props.color || "transparent"};
     width: ${size}px;
     height: ${size}px;
     padding: 0.2rem;
@@ -221,31 +221,31 @@ PieGraphics.propTypes = {
       PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.shape({ colorSection: PropTypes.string }),
-      ])
+      ]),
     ),
     fairtrade: PropTypes.arrayOf(
       PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.shape({ colorSection: PropTypes.string }),
-      ])
+      ]),
     ),
     resources: PropTypes.arrayOf(
       PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.shape({ colorSection: PropTypes.string }),
-      ])
+      ]),
     ),
     animalwelfare: PropTypes.arrayOf(
       PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.shape({ colorSection: PropTypes.string }),
-      ])
+      ]),
     ),
     workconditions: PropTypes.arrayOf(
       PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.shape({ colorSection: PropTypes.string }),
-      ])
+      ]),
     ),
   }),
   size: PropTypes.number,

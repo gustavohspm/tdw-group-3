@@ -38,9 +38,7 @@
 }
 
 .card-hover:hover {
-  /* box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);  */
-   /* Adiciona uma sombra sutil no hover */
-  transition: box-shadow 0.3s ease;  /* Adiciona uma transição suave à sombra */
+  transition: box-shadow 0.3s ease;
 }
 
 .favorite-star {
@@ -68,26 +66,26 @@
 }
 
 .heading-title {
-  font-family: 'Century Gothic', sans-serif;
+  font-family: "Century Gothic", sans-serif;
   font-size: 24px;
   text-transform: uppercase;
   text-align: center;
 }
 
 .card-title {
-  font-family: 'Century Gothic', sans-serif;
+  font-family: "Century Gothic", sans-serif;
   font-size: 14px;
 }
 
 .product-details-container {
   display: flex;
   justify-content: space-between;
-  font-family: 'Century Gothic', sans-serif;
+  font-family: "Century Gothic", sans-serif;
 }
 
 .product-image {
   max-width: 50%;
-  /* margin-right: 20px; */
+
 }
 
 .responsive-image {
@@ -102,7 +100,7 @@
 @media (max-width: 768px) {
   .product-details-container {
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
   }
 
   .product-image,
@@ -116,18 +114,17 @@
 .icons svg {
   margin-bottom: 5px;
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: space-between;
 }
 
 body {
-  font-family: 'Century Gothic', sans-serif;
+  font-family: "Century Gothic", sans-serif;
   font-size: 14px;
 }
 
 .add-to-cart-button {
-  background-color: #A7C7D9;
+  background-color: #a7c7d9;
   color: #000;
   border: none;
   font-size: 16px;
@@ -135,7 +132,7 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #A7C7D9;
+  background-color: #a7c7d9;
   color: #000;
 }
 
